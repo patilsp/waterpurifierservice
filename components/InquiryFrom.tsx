@@ -30,6 +30,7 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
           note: inquiry.note,
           inquiryType: inquiry.inquiryType,
           model: inquiry.model,
+          username: inquiry.name,
         }),
       });
 
@@ -42,6 +43,7 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
           inquiryType: "",
           note: "",
           model: "",
+          username:"",
         });
       } else {
         toast.error("Failed to register Inquiry.");
