@@ -10,10 +10,13 @@ const client = twilio(accountSid, authToken);
 
 
 export const POST = async (request) => {
-    try {
-        const { name, mobile, note, inquiryType, model } = await request.json();
+    const username = "";
 
-        if (!name || !mobile || !inquiryType) {
+    try {
+        const { name, mobile, note, inquiryType, model} = await request.json();
+
+
+        if (!name || !mobile || !inquiryType || !username) {
             return new Response(JSON.stringify({ error: "Missing required fields" }), { status: 400 });
         }
 
