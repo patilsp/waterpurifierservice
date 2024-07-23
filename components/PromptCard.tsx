@@ -44,7 +44,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
             />
 
             <div className='flex flex-col'>
-              <h3 className='font-satoshi font-semibold text-gray-900'>
+              <h3 className=' font-semibold text-gray-900'>
                 {post.creator?.username}
               </h3>
               <p className='font-inter text-sm text-gray-500'>
@@ -67,24 +67,24 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
           </div>
         </div>
 
-        <p className='my-4 font-satoshi text-sm text-gray-700'>{post.prompt}</p>
+        <p className=' my-4 text-sm text-gray-700'>{post.prompt}</p>
         <p
-          className='font-inter text-sm blue_gradient cursor-pointer'
+          className='font-inter blue_gradient cursor-pointer text-sm'
           onClick={() => handleTagClick && handleTagClick(post.tag)}
         >
           #{post.tag}
         </p>
 
         {session?.user.id === post.creator?._id && pathName === "/profile" && (
-          <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
+          <div className='flex-center mt-5 gap-4 border-t border-gray-100 pt-3'>
             <p
-              className='font-inter text-sm green_gradient cursor-pointer'
+              className='font-inter green_gradient cursor-pointer text-sm'
               onClick={handleEdit}
             >
               Edit
             </p>
             <p
-              className='font-inter text-sm orange_gradient cursor-pointer'
+              className='font-inter orange_gradient cursor-pointer text-sm'
               onClick={handleDelete}
             >
               Delete

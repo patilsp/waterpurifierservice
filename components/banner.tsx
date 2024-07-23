@@ -117,7 +117,7 @@ export default function Banner() {
 
               <Button className="btn btn-text flex items-center gap-1 bg-transparent text-black hover:text-white">
                 <span>Know More</span>
-                <Image src="/assets/arrow-right.svg" alt="arrow image" width={20} height={20} className="h-5 w-5" />
+                <Image src="/assets/arrow-right.svg" alt="arrow image" width={20} height={20} className="size-5" />
               </Button>
             </div>
           </div>

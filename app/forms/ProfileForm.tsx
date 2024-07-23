@@ -110,7 +110,7 @@ export function ProfileForm() {
           alt="Profile Picture"
           height={120}
           width={120}
-          className="h-20 w-20 rounded-full"
+          className="size-20 rounded-full"
         />
         <h2 className="mt-4 text-xl font-bold">{user?.fullName || "User Name"}</h2>
         <p className="text-sm text-gray-600">{user?.phone || ""}</p>
