@@ -8,11 +8,11 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
 export const POST = async (request) => {
-    const { username, mobile, note, inquiryType, model} = await request.json();
+    const { username, name, mobile, note, inquiryType, model} = await request.json();
 
     try {
         await connectToDB();
-        const newInquiry = new Inquiry({ username, mobile, note, inquiryType, model });
+        const newInquiry = new Inquiry({ username, name, mobile, note, inquiryType, model });
         await newInquiry.save();
 
         // Send SMS notification

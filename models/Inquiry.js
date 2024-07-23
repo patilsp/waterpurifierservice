@@ -1,10 +1,6 @@
 import { Schema, model, models } from 'mongoose';
 
 const InquirySchema = new Schema({
-
-  id: {
-    type: String,
-  },
   userId: {
     type: String,
   },
@@ -12,6 +8,9 @@ const InquirySchema = new Schema({
     type: String,
   },
   username: {
+    type: String,
+  },
+  name: {
     type: String,
   },
   mobile: {

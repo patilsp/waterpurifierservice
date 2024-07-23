@@ -20,7 +20,6 @@ import {
 
 import bannerImage from '../public/images/banner.webp';
 
-
 export default function Banner() {
   const [submitting, setIsSubmitting] = useState(false);
   const [inquiry, setInquiry] = useState({
@@ -29,6 +28,7 @@ export default function Banner() {
     note: "",
     complaintType: "",
     model: "",
+    name:"",
   });
   const [open, setOpen] = useState(false);
 
@@ -47,18 +47,20 @@ export default function Banner() {
       if (response.ok) {
         toast.success("Inquiry has been registered successfully! 🔥");
         setInquiry({
+          username: "",
           mobile: "",
           note: "",
           model:"",
           inquiryType:"",
-          username: "",
+          name:"",
+         
         });
         setTimeout(() => setOpen(false), 2000);
       } else {
-        console.log(error("Failed to register inquiry."));
+        console.error("Failed to register inquiry.");
       }
     } catch (error) {
-      console.log(error("An error occurred."));
+      console.error("An error occurred.");
     } finally {
       setIsSubmitting(false);
     }
