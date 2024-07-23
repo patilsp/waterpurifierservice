@@ -10,18 +10,11 @@ const client = twilio(accountSid, authToken);
 
 
 export const POST = async (request) => {
-    const username = "";
+    const { name, mobile, note, inquiryType, model, username} = await request.json();
 
     try {
-        const { name, mobile, note, inquiryType, model} = await request.json();
-
-
-        if (!name || !mobile || !inquiryType || !username) {
-            return new Response(JSON.stringify({ error: "Missing required fields" }), { status: 400 });
-        }
-
         await connectToDB();
-        const newInquiry = new Inquiry({ name, mobile, note, inquiryType, model });
+        const newInquiry = new Inquiry({ name, mobile, note, inquiryType, model, username});
         await newInquiry.save();
 
         // Send SMS notification
@@ -34,7 +27,6 @@ export const POST = async (request) => {
         return new Response(JSON.stringify({ id: newInquiry._id }), { status: 201 });
     } catch (error) {
         console.error('Failed to create a new Inquiry:', error);
-        return new Response(JSON.stringify({ error: "Failed to create a new Inquiry", details: error.message }), { status: 500 });
+        return new Response("Failed to create a new Inquiry", { status: 500 });
     }
 };
-
