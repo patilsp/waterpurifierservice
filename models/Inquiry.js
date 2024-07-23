@@ -13,11 +13,9 @@ const InquirySchema = new Schema({
   },
   username: {
     type: String,
-    required: [true, 'Inquiry Name is required.'],
   },
   mobile: {
-    type: Number,
-    required: [true, 'Inquiry Price is required.'],
+    type: String,
   },
    note: {
     type: String,
