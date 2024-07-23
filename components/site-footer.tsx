@@ -14,19 +14,19 @@ export function SiteFooter() {
             <div className="mt-8 flex space-x-6 text-gray-600">
               <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
                 <span className="sr-only"> Facebook </span>
-                <Facebook className="h-6 w-6" />
+                <Facebook className="size-6" />
               </a>
               <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
                 <span className="sr-only"> Instagram </span>
-                <Instagram className="h-6 w-6" />
+                <Instagram className="size-6" />
               </a>
               <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
                 <span className="sr-only"> Twitter </span>
-                <Twitter className="h-6 w-6" />
+                <Twitter className="size-6" />
               </a>
               <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
                 <span className="sr-only"> GitHub </span>
-                <Github className="h-6 w-6" />
+                <Github className="size-6" />
               </a>
             
             </div>

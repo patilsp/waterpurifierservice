@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
-    <div className='mt-12 prompt_layout'>
+    <div className='prompt_layout mt-12'>
       {data.map((post) => (
         <PromptCard
           key={post._id}
@@ -71,7 +71,7 @@ const Feed = () => {
   return (
     
       <section className='feed'>
-        <form className='relative w-full flex-center'>
+        <form className='flex-center relative w-full'>
           <input
             type='text'
             placeholder='Search for a tag or a username'

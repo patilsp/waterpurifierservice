@@ -26,7 +26,7 @@ export function DatePickerDemo({ date, setDate }) {
           variant={"outline"}
           className="w-full justify-start text-left font-normal"
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          <CalendarIcon className="mr-2 size-4" />
           {date ? format(date, "PPP") : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>

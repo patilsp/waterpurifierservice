@@ -241,19 +241,19 @@ export function CommandMenu({ ...props }: DialogProps) {
               <CommandItem
                 onSelect={() => runCommand(() => setTheme("light"))}
               >
-                <SunIcon className="h-8 w-8 rounded-md bg-gray-300 p-1 dark:text-gray-500" />
+                <SunIcon className="size-8 rounded-md bg-gray-300 p-1 dark:text-gray-500" />
                 {/* <span>Light</span> */}
               </CommandItem>
               <CommandItem
                 onSelect={() => runCommand(() => setTheme("dark"))}
               >
-                <MoonIcon className="h-8 w-8 rounded-md bg-gray-300 p-1 dark:text-gray-500" />
+                <MoonIcon className="size-8 rounded-md bg-gray-300 p-1 dark:text-gray-500" />
                 {/* <span>Dark</span> */}
               </CommandItem>
               <CommandItem
                 onSelect={() => runCommand(() => setTheme("system"))}
               >
-                <LaptopIcon className="h-8 w-8 rounded-md bg-gray-300 p-1 dark:text-gray-500" />
+                <LaptopIcon className="size-8 rounded-md bg-gray-300 p-1 dark:text-gray-500" />
                 {/* <span>System</span> */}
               </CommandItem>
             </div>
