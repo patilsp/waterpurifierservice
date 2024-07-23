@@ -1,4 +1,4 @@
-import Complaint from "@/models/Complaint";
+import Complaint from "@/models/complaint";
 import { connectToDB } from "@/utils/database";
 
 export const GET = async (request) => {
