@@ -80,11 +80,7 @@
   }
   
 }
-.cl-internal-17ydaof{
-  background-color: transparent !important;
-  border: 2px solid white !important;
-  backdrop-filter: blur(10px);
-}
+
 
 .btn-primary{
   color: #fff;
@@ -170,10 +166,20 @@ html {
 
 }
 
+.cl-internal-17ydaof{
+  background-color: transparent !important;
+  border: 2px solid white !important;
+  backdrop-filter: blur(10px);
+}
+
 .cl-internal-yrq74:hover {
   background-color: var(--accentLightest);
 }
-
+.cl-internal-19xp6v9{
+  background-color: transparent !important;
+  border: 2px solid white !important;
+  backdrop-filter: blur(10px);
+}
 .cl-internal-yrq74 {
   border-radius: 5px !important;
   padding: 0 5px !important;
@@ -396,4 +402,7 @@ p.label {
 .card-bg {
   --tw-bg-opacity: 1;
   background-color: rgb(238 241 255 / 1);
+}
+.cl-internal-g6a67s {
+  margin-right: 5px;
 }

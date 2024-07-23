@@ -32,9 +32,11 @@ export default function DashboardPage() {
     <div className="border p-4">
       <div className="flex-col md:flex">
         <div className="mb-2 border-b">
-          <div className="flex h-16 items-center px-4">
+          <div className="flex h-16 justify-start px-4">
+            <div className="hidden md:block">
             <TeamSwitcher />
-            <div className="ml-auto flex items-center space-x-4">
+            </div>
+            <div className="ml-auto flex justify-start space-x-4">
               <Search />
             </div>
           </div>
@@ -42,7 +44,7 @@ export default function DashboardPage() {
         <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
-            <div className="flex items-center space-x-2">
+            <div className="hidden items-center space-x-2 md:flex">
               <CalendarDateRangePicker />
               <Button>Download</Button>
             </div>
@@ -56,9 +58,7 @@ export default function DashboardPage() {
               <TabsTrigger value="reports">
                 Reports
               </TabsTrigger>
-              <TabsTrigger value="notifications">
-                Notifications
-              </TabsTrigger>
+             
             </TabsList>
             <TabsContent value="overview" className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

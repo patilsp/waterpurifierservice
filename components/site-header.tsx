@@ -18,13 +18,13 @@ export function SiteHeader() {
 
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-50 w-full border-b bg-background/95 shadow backdrop-blur">
-      <div className="flex h-14 items-center px-2">
+      <div className="flex h-14 items-center pl-2">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/water.svg"
-            className="mt-9 object-contain"
-            width={75}
-            height={75}
+            className="mt-8 object-contain"
+            width={60}
+            height={60}
             alt="Logo image"
           />
         </Link>
@@ -42,7 +42,7 @@ export function SiteHeader() {
             </Link>
 
           {userId == null ? (
-            <Link href="/sign-in" className="flex w-20 justify-center rounded-md border bg-white p-1 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+            <Link href="/sign-in" className="mr-1 flex w-20 justify-center rounded-md border bg-white p-1 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
                 Sign In
              
             </Link>

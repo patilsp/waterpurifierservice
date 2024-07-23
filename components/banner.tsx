@@ -80,7 +80,7 @@ export default function Banner() {
             </h1>
             <motion.p
               variants={slideInFromLeft(0.8)}
-              className="mt-4 max-w-2xl text-sm leading-normal text-gray-50 sm:text-xl sm:leading-8"
+              className="mt-4 max-w-2xl text-sm leading-normal text-slate-700 sm:text-xl sm:leading-8"
             >
               Experience pure and fresh water with our advanced purification services. Reliable solutions for your home and office.
             </motion.p>

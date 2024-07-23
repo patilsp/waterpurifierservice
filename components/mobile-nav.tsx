@@ -23,7 +23,7 @@ export function MobileNav() {
   const pathname = usePathname();
 
   const userName = user?.fullName || "User Name";
-  const userProfileImage = user?.profileImageUrl || "/images/avatar.png";
+  const userProfileImage = user?.profileImageUrl || "/avatars/02.png";
   const userMobile = user?.phone || "";
 
   return (
@@ -31,9 +31,9 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="mr-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
-          <ViewVerticalIcon className="size-5" />
+          <ViewVerticalIcon className="-ml-4 size-5" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
@@ -45,9 +45,9 @@ export function MobileNav() {
         >
           <Image
             src={userProfileImage}
-            className="size-6 rounded-lg border object-contain "
-            width={50}
-            height={50}
+            className="mr-1 size-8 rounded-lg border border-white object-contain "
+            width={70}
+            height={70}
             alt="user profile image"
            
           />
