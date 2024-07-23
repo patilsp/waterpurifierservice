@@ -24,7 +24,7 @@ import bannerImage from '../public/images/banner.webp';
 export default function Banner() {
   const [submitting, setIsSubmitting] = useState(false);
   const [inquiry, setInquiry] = useState({
-    name: "",
+    username: "",
     mobile: "",
     note: "",
     complaintType: "",
@@ -47,7 +47,6 @@ export default function Banner() {
       if (response.ok) {
         toast.success("Inquiry has been registered successfully! 🔥");
         setInquiry({
-          name: "",
           mobile: "",
           note: "",
           model:"",

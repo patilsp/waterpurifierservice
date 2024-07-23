@@ -25,12 +25,11 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: inquiry.name,
           mobile: inquiry.mobile,
           note: inquiry.note,
           inquiryType: inquiry.inquiryType,
           model: inquiry.model,
-          username: inquiry.name,
+          username: inquiry.username,
         }),
       });
 
@@ -38,7 +37,6 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
         toast.success("Inquiry has been registered successfully! 🔥");
         router.push("/inquiries");
         setInquiry({
-          name: "",
           mobile: "",
           inquiryType: "",
           note: "",
@@ -86,10 +84,9 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
         <div className="grid gap-2">
           <Label htmlFor="name">Name</Label>
           <Input
-            value={inquiry.name}
-            onChange={(e) => setInquiry({ ...inquiry, name: e.target.value })}
-            placeholder='Enter customer Name'
-            required
+            value={inquiry.username}
+            onChange={(e) => setInquiry({ ...inquiry, username: e.target.value })}
+            placeholder='Enter customer Name'            
             className='input'
           />
         </div>
