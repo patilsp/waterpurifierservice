@@ -1,4 +1,4 @@
-import Inquiry from "@/models/inquiry";
+import Inquiry from "@/models/Inquiry";
 import { connectToDB } from "@/utils/database";
 import twilio from 'twilio';
 
