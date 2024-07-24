@@ -51,17 +51,17 @@ export function CommandMenu({ ...props }: DialogProps) {
 
   return (
     <>
-      <Button
+      <button
         variant="outline"
         className={cn(
-          "relative mr-2 h-7 px-1"
+          "group inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800"
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
-      
-      <Search size={24} color="black" className="p-1"/>
-      </Button>
+      <Search className="mb-1 size-5 text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-500" />
+      </button>
+
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>

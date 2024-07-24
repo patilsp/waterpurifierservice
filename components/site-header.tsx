@@ -34,7 +34,7 @@ export function SiteHeader() {
         <MobileNav />
         
         <div className="flex flex-1 items-center justify-end  md:justify-end">
-        <CommandMenu />
+        {/* <CommandMenu /> */}
           {/* <ModeToggle /> */}
           <Link href="/dashboard" className="mr-1 hidden justify-center rounded-md border bg-white p-1 px-2 font-medium  text-black shadow transition-colors   focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:flex">
                 Dashboard
