@@ -1,5 +1,6 @@
-import Inquiry from "@/models/inquiry";
+import Service from "@/models/service";
 import { connectToDB } from "@/utils/database";
+
 import twilio from 'twilio';
 
 // Initialize Twilio client
@@ -12,8 +13,8 @@ export const POST = async (request) => {
 
     try {
         await connectToDB();
-        const newInquiry = new Inquiry({ username, name, mobile, note, inquiryType, model });
-        await newInquiry.save();
+        const newService = new Service({ username, name, mobile, note, inquiryType, model });
+        await newService.save();
 
         // Send SMS notification
         await client.messages.create({
@@ -22,7 +23,7 @@ export const POST = async (request) => {
             to: process.env.NOTIFICATION_PHONE_NUMBER,
         });
 
-        return new Response(JSON.stringify({ id: newInquiry._id }), { status: 201 });
+        return new Response(JSON.stringify({ id: newService._id }), { status: 201 });
     } catch (error) {
         console.error('Failed to create a new Inquiry:', error);
         return new Response("Failed to create a new Inquiry", { status: 500 });

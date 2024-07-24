@@ -1,6 +1,6 @@
 import { Schema, model, models } from 'mongoose';
 
-const InquirySchema = new Schema({
+const ServiceSchema = new Schema({
   userId: {
     type: String,
   },
@@ -28,6 +28,6 @@ const InquirySchema = new Schema({
 
 });
 
-const Inquiry = models.Inquiry || model('Inquiry', InquirySchema);
+const Service = models.Service || model('Service', ServiceSchema);
 
-export default Inquiry;
+export default Service;

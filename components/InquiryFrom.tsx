@@ -36,7 +36,7 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
 
       if (response.ok) {
         toast.success("Inquiry has been registered successfully! 🔥");
-        router.push("/inquiries");
+        router.push("/");
         setInquiry({
           mobile: "",
           inquiryType: "",
