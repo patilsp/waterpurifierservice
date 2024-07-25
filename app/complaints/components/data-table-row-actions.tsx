@@ -128,9 +128,8 @@ export function DataTableRowActions({
             }
 
             toast.success(`Complaint assigned to ${assignUser} with status ${status}`);
-            setShowAssignDialog(false);
-
             router.refresh();
+            setShowAssignDialog(false);
         } catch (error) {
             toast.error(`Error assigning complaint: ${error.message}`);
         }

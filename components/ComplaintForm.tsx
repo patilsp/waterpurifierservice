@@ -79,7 +79,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
     <section className="flex w-full justify-center p-1 md:px-4">
     <div className="container flex flex-col items-center justify-center gap-6 p-1 lg:flex-row lg:p-8">
       {/* Image Section */}
-      <div className="hidden w-full overflow-hidden md:block lg:w-1/2">
+      {/* <div className="hidden w-full overflow-hidden md:block lg:w-1/2">
         <Image
           src="/images/counting.png"
           alt="work"
@@ -87,7 +87,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
           height={500}
           className="object-cover p-10"
         />
-      </div>
+      </div> */}
 
       {/* Form Section */}
       <div className="w-full rounded-lg border bg-white shadow-lg lg:w-1/2">
@@ -196,7 +196,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
         </div>
            
           <div className='mt-6 flex justify-center gap-4'>
-            <Link href='/products' className='flex items-center rounded bg-red-400 p-1 px-4 text-sm text-primary-foreground shadow hover:bg-red-600'>
+            <Link href='/complaints' className='flex items-center rounded bg-red-400 p-1 px-4 text-sm text-primary-foreground shadow hover:bg-red-600'>
               Cancel
             </Link>
 
