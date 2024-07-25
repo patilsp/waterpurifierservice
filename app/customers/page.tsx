@@ -39,7 +39,7 @@ export default function CustomerPage() {
     <div className="h-full flex-1 flex-col space-y-8 p-8 md:flex">
       <div className="flex items-center justify-between space-y-2">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">Welcome back! <span className="text-indigo-500" >{ userName } </span> </h2>
+          <h2 className="text-2xl font-bold tracking-tight">Welcome back! </h2>
           <p className="text-muted-foreground">
             Here&apos;s a list of your customers for this month!
           </p>

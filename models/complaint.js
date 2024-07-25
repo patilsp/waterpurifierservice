@@ -26,6 +26,7 @@ const ComplaintSchema = new Schema({
     type: String,
     default: 'Active', 
   },
+  assignUser: { type: String, default: null },
 
 }, { timestamps: true }); 
 

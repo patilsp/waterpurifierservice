@@ -33,8 +33,8 @@ export const columns: ColumnDef<Complaint>[] = [
     ),
     cell: ({ row }) => {
       const id = row.getValue("id");
-      const formattedId = Number.isInteger(id) ? `JS-${id}` : `JS-${parseInt(id, 14)}`;
-      return <div className="w-[80px]">{formattedId}</div>;
+      const formattedId = Number.isInteger(id) ? `JS-${id}` : `JS-${parseInt(id, 12)}`;
+      return <div className="">{formattedId}</div>;
     },
     enableSorting: true,
     enableHiding: false,
@@ -44,7 +44,7 @@ export const columns: ColumnDef<Complaint>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Customer Name" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("name")}</div>,
+    cell: ({ row }) => <div className="">{row.getValue("name")}</div>,
     enableSorting: true,
     enableHiding: false,
   },
@@ -73,7 +73,7 @@ export const columns: ColumnDef<Complaint>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
     ),
-    cell: ({ row }) => <div className="">{row.getValue("status")}</div>,
+    cell: ({ row }) => <div className=" bg-slate-300 rounded p-1">{row.getValue("status")}</div>,
     enableSorting: true,
     enableHiding: true,
   },

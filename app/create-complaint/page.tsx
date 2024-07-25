@@ -20,13 +20,14 @@ const CreateComplaint = () => {
   const [submitting, setIsSubmitting] = useState(false);
   const [complaint, setComplaint] = useState({
     userId: "",
-    productType: "",
-    complaintType: "",
+    productType: "product-1",
+    complaintType: "Installation",
     mobile: "",
     address: "",
     visitDate: "",
-    status: "Pending",
+    status: "Active",
     name: "",
+    assignUser:"Admin",
   });
 
   const createComplaint = async (e) => {

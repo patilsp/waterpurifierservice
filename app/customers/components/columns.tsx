@@ -84,7 +84,7 @@ export const columns: ColumnDef<Customer>[] = [
   {
     accessorKey: "area",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Customer Place" />
+      <DataTableColumnHeader column={column} title="Customer City" />
     ),
     cell: ({ row }) => <div className="">{row.getValue("area")}</div>,
     enableSorting: true,
@@ -93,7 +93,7 @@ export const columns: ColumnDef<Customer>[] = [
   {
     accessorKey: "pincode",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Customer PinCode" />
+      <DataTableColumnHeader column={column} title="PinCode" />
     ),
     cell: ({ row }) => <div className="">{row.getValue("pincode")}</div>,
     enableSorting: true,
@@ -104,7 +104,7 @@ export const columns: ColumnDef<Customer>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
     ),
-    cell: ({ row }) => <div className="">{row.getValue("status")}</div>,
+    cell: ({ row }) => <div className="bg-slate-300 rounded p-1">{row.getValue("status")}</div>,
     enableSorting: true,
     enableHiding: true,
   },

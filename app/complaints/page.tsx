@@ -1,14 +1,36 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { columns } from "./components/columns";
 import { DataTable } from "./components/data-table";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@clerk/nextjs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/registry/new-york/ui/card";
+
+const statusTypes = [
+  { value: 'all', label: 'Total Complaints' },
+  { value: 'warranty', label: 'Warranty' },
+  { value: 'Out Of Warranty', label: 'Out of Warranty' },
+  { value: 'canceled', label: 'Cancelled' },
+  { value: 'completed', label: 'Completed' },
+];
 
 export default function CustomerPage() {  
   const [allComplaints, setAllComplaints] = useState([]);
+  const [filteredComplaints, setFilteredComplaints] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [statusCounts, setStatusCounts] = useState({});
+  const [selectedStatus, setSelectedStatus] = useState('all');
+  const router = useRouter();
+  const { isLoaded, userId } = useAuth();
 
   const fetchComplaints = async () => {
     setLoading(true);
@@ -16,12 +38,23 @@ export default function CustomerPage() {
       const response = await fetch("/api/complaint");
       const data = await response.json();
       
-      const transformedComplaints = data.map((complaint, index) => ({
+      const transformedComplaints = data.map((complaint) => ({
         ...complaint,
         id: complaint._id.toString(),
       }));
 
       setAllComplaints(transformedComplaints);
+      setFilteredComplaints(transformedComplaints);
+
+      // Calculate counts
+      const counts = {
+        all: transformedComplaints.length,
+        warranty: transformedComplaints.filter(c => c.status === 'warranty').length,
+        'Out Of Warranty': transformedComplaints.filter(c => c.status === 'Out Of Warranty').length,
+        canceled: transformedComplaints.filter(c => c.status === 'canceled').length,
+        completed: transformedComplaints.filter(c => c.status === 'completed').length,
+      };
+      setStatusCounts(counts);
     } catch (error) {
       console.error("Failed to fetch complaints:", error);
     } finally {
@@ -33,7 +66,18 @@ export default function CustomerPage() {
     fetchComplaints();
   }, []);
 
+  const handleStatusClick = (status) => {
+    setSelectedStatus(status);
+    if (status === 'all') {
+      setFilteredComplaints(allComplaints);
+    } else {
+      setFilteredComplaints(allComplaints.filter(c => c.status === status));
+    }
+  };
+
   return (
+
+
     <div className="h-full flex-1 flex-col space-y-8 p-8 md:flex">
       <div className="flex items-center justify-between space-y-2">
         <div>
@@ -47,6 +91,28 @@ export default function CustomerPage() {
             <PlusCircledIcon className="mr-2 size-4" />
             Add Complaint
           </Link>           
+        </div>
+      </div>
+
+
+      <div className="flex-col md:flex">        
+        <div className="flex-1 space-y-4 pt-6">          
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+            {statusTypes.map((statusType) => (
+              <Card className="">
+                <div
+                    key={statusType.value}
+                    className={`p-4 rounded-lg cursor-pointer ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-gray-100'}`}
+                    onClick={() => handleStatusClick(statusType.value)}
+                  >    
+                    <CardContent className="flex justify-between items-center gap-3">              
+                        <h2 className="text-sm font-bold">{statusType.label}</h2>
+                        <p className="text-xl font-bold text-muted-foreground">{statusCounts[statusType.value]}</p>
+                    </CardContent>              
+                  </div>
+                </Card>
+              ))}
+          </div>
         </div>
       </div>
 
@@ -67,7 +133,7 @@ export default function CustomerPage() {
           </svg>
         </div>
       ) : (
-        <DataTable data={allComplaints} columns={columns} />
+        <DataTable data={filteredComplaints} columns={columns} />
       )}
     </div>
   );

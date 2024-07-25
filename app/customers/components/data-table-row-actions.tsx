@@ -55,7 +55,8 @@ export function DataTableRowActions<TData>({
         if (!response.ok) {
           throw new Error("Failed to delete customer ");
         }else{
-          toast.error("Customer has been deleted!");
+          toast.success("Customer has been deleted!");
+          router.refresh();
           router.push("/customers"); 
         }
         if (onDelete) {

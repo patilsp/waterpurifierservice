@@ -11,68 +11,87 @@ const UpdateComplaint = () => {
   const complaintId = searchParams.get("id");
 
   const [complaint, setComplaint] = useState({
-    name: "",
+    id: "",
+    userId: "",
+    productType: "",
+    complaintType: "",
     mobile: "",
-    note: "",
-    id: ""
+    address: "",
+    visitDate: "",
+    status: "",
+    name: "",
+    assignUser:"",
   });
   const [submitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const getComplaintDetails = async () => {
       try {
+        // console.log(`Fetching data from: /api/complaint/${complaintId}`); // Add this line
         const response = await fetch(`/api/complaint/${complaintId}`);
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          const errorMessage = await response.text(); // Read error message from response
+          throw new Error(errorMessage || "Network response was not ok");
         }
         const data = await response.json();
         setComplaint(data);
       } catch (error) {
         console.error("Failed to fetch complaint:", error);
+        toast.error(`Failed to fetch complaint: ${error.message}`); // Show error message in toast
       }
     };
+    
 
     if (complaintId) getComplaintDetails();
   }, [complaintId]);
 
-  console.log(complaintId);
 
   const updateComplaint = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     if (!complaintId) {
-      alert("Missing ComplaintId!");
-      setIsSubmitting(false);
-      return;
+        alert("Missing ComplaintId!");
+        setIsSubmitting(false);
+        return;
     }
 
     try {
-      const response = await fetch(`/api/complaint/${complaintId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: complaint.name,
-          mobile: complaint.mobile,
-          note: complaint.note,
-        }),
-      });
+        const response = await fetch(`/api/complaint/${complaintId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name: complaint.name,
+                productType: complaint.productType,
+                complaintType: complaint.complaintType,
+                mobile: complaint.mobile,
+                address: complaint.address,
+                visitDate: complaint.visitDate,
+                status: complaint.status,
+                assignUser: "Admin",
+    
+            }),
+        });
 
-      const responseData = await response.json(); // Parse response as JSON
-      if (response.ok) {
-        toast.success(responseData.message || "Complaint has been updated! 🔥"); // Use response message
-        router.push("/complaints");
-      } else {
-        throw new Error(responseData.message || "Failed to update complaint"); // Include error message from API
-      }
+        // Attempt to parse JSON response
+        const responseData = await response.json(); 
+
+        if (response.ok) {
+            toast.success(responseData.message || "Complaint has been updated! 🔥");
+            router.push("/complaints");
+        } else {
+            throw new Error(responseData.message || "Failed to update complaint");
+        }
     } catch (error) {
-      toast.error(`Failed to update complaint! ${error.message}`);
+        console.error("Update error:", error);
+        toast.error(`Failed to update complaint! ${error.message}`);
     } finally {
-      setIsSubmitting(false);
+        setIsSubmitting(false);
     }
-  };
+};
+
 
   return (
     <ComplaintForm
