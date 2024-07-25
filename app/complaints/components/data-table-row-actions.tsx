@@ -153,13 +153,26 @@ export function DataTableRowActions({
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem onSelect={handleEdit}>Edit</DropdownMenuItem>
-          
-         
+          <DropdownMenuItem onSelect={() => setShowAssignDialog(true)}>
+            Assign Complaint
+          </DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>Other</DropdownMenuSubTrigger>
+            <DropdownMenuSubContent>
+              <DropdownMenuRadioGroup value={complaint.label}>
+                {names.map((label) => (
+                  <DropdownMenuRadioItem key={label.value} value={label.value}>
+                    {label.label}
+                  </DropdownMenuRadioItem>
+                ))}
+              </DropdownMenuRadioGroup>
+            </DropdownMenuSubContent>
+          </DropdownMenuSub>
+          <DropdownMenuSeparator />
           <DropdownMenuItem onSelect={handleDelete}>
             Delete
             <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
           </DropdownMenuItem>
-          
         </DropdownMenuContent>
       </DropdownMenu>
 
@@ -196,6 +209,8 @@ export function DataTableRowActions({
                           <SelectItem value="">No users available</SelectItem>
                         )}
                       </SelectContent> */}
+
+
                       <SelectContent>
                         {dummyUsers.map((user) => (
                           <SelectItem key={user.value} value={user.value}>
