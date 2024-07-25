@@ -196,6 +196,11 @@ html {
   padding: 0px 0.5rem !important;
 }
 
+.glassmorphism{
+    background-color: transparent !important;
+    border: 2px solid white !important;
+    backdrop-filter: blur(10px);
+}
 
 .logo-tricker-image{
   @apply h-8 w-auto;

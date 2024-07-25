@@ -3,7 +3,7 @@ import React from 'react';
 function Pricing() {
   return (
     <section>
-        <div className="mt-10 grid gap-10 px-8 text-zinc-800 lg:grid-cols-3">
+        <div className="mt-10 grid gap-10 px-8 py-10 text-zinc-800 lg:grid-cols-3">
         <div className="flex max-w-sm flex-col items-center rounded-lg bg-slate-100 p-8 shadow-lg">
             <div>
             <h2 className="mb-2 text-center text-3xl font-extrabold">Starter</h2>

@@ -25,7 +25,7 @@ interface DataTableRowActionsProps {
   row: Row<Complaint>;
   onEdit: (complaintId: string) => void;
   onDelete: (complaintId: string) => void;
-  onRefresh: () => void; // Add this prop
+  onRefresh?: () => void; // Optional prop
 }
 
 export function DataTableRowActions({
@@ -55,9 +55,13 @@ export function DataTableRowActions({
         if (!response.ok) {
           throw new Error("Failed to delete complaint");
         } else {
-          toast.error("Complaint has been deleted!");
+          toast.success("Complaint has been deleted!");
           if (onRefresh) {
             onRefresh(); 
+          } else {
+            // Fallback option if onRefresh is not provided
+            router.refresh(); // Use this if router.refresh() is available
+            // window.location.reload(); // Use this as a last resort to force a full page reload
           }
         }
         if (onDelete) {
@@ -98,7 +102,7 @@ export function DataTableRowActions({
           </DropdownMenuSubContent>
         </DropdownMenuSub>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onSelect={handleDelete} >
+        <DropdownMenuItem onSelect={handleDelete}>
           Delete
           <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
         </DropdownMenuItem>

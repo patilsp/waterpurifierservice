@@ -91,7 +91,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
 
       {/* Form Section */}
       <div className="w-full rounded-lg border bg-white shadow-lg lg:w-1/2">
-        <div className="p-4">
+        <div className="p-5">
           <h1 className='head_text text-center'>
             <span className='green_gradient text-xl font-bold'>{type} Complaint</span>
           </h1>
@@ -122,7 +122,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
 
         <div className="grid gap-2">
             <Label htmlFor="product">Choose Product</Label>
-            <Select value={complaint.productType} defaultValue={complaint.productType || "product-1"} onValueChange={handleStatusChange}>
+            <Select value={complaint.productType} defaultValue={complaint.productType || "product-1"} onValueChange={handleProductTypeChange}>
               <SelectTrigger className="line-clamp-1 w-full truncate">
                 <SelectValue placeholder="Select Product" />
               </SelectTrigger>

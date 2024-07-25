@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
 import { motion } from 'framer-motion';
@@ -46,14 +45,25 @@ export function DatePickerDemo({ date, setDate }) {
 
 const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
   const [date, setDate] = useState(post.dateOfBirth ? new Date(post.dateOfBirth) : undefined);
-  const { isLoaded, userId } = useAuth();
-  const { isSignedIn } = useUser();
+
+  const { isLoaded, userId, sessionId, getToken } = useAuth();
+  const { isSignedIn, user } = useUser();
+
+  const username = user?.fullName || "";
+  const phone = user?.phoneNumber || "";
+  const email = user?.emailAddress || "";
 
   useEffect(() => {
     if (isLoaded && isSignedIn && userId) {
-      setPost((prevPost) => ({ ...prevPost, userId }));
+      setPost((prevPost) => ({
+        ...prevPost,
+        userId,
+        username: prevPost.username || username,
+        email: prevPost.email || email,
+        phone: prevPost.phone || phone,
+      }));
     }
-  }, [isLoaded, isSignedIn, setPost, userId]);
+  }, [isLoaded, isSignedIn, userId, username, email, phone, setPost]);
 
   useEffect(() => {
     if (date) {
@@ -69,38 +79,22 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
   };
 
   return (
-    <section className='flex flex-col py-4 md:flex-row'>
-      {/* Image Section */}
-      <motion.div
-        className="hidden h-full w-1/2 md:flex"
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 100 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Image src="/images/user-welcome.png" 
-        alt="User Image" 
-        height={600}
-        width={600}
-        className="object-cover p-10" 
-        />
-      </motion.div>
-
+    <section className="relative flex justify-center h-screen bg-cover bg-center py-5" style={{ backgroundImage: 'url(/images/banner1.jpg)' }}>
+      <div className="absolute inset-0 opacity-50"></div>
       {/* Form Section */}
       <div className="w-full p-4 md:w-1/2">
         <div className="mt-10 p-4">         
           <motion.form
             onSubmit={handleSubmit}
-            className='glassmorphism mt-2 flex w-full flex-col gap-4 rounded border p-8 shadow'
+            className='glassmorphism mt-2 flex w-full bg-transparent text-slate-800 flex-col gap-4 rounded border p-8 shadow'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
 
-          <h1 className='head_text my-2  text-center text-xl'>
-            Register User
+          <h1 className='head_text my-2 text-center text-xl'>
+            Complete User Registration
           </h1>
-
 
             <div className="grid gap-2">
               <Label htmlFor="username">User Full Name</Label>

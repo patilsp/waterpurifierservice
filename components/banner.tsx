@@ -87,7 +87,7 @@ export default function Banner() {
             <div className="mt-7 flex gap-2">
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
-                <Button className="btn btn-primary">Get for Free</Button>
+                <Button className="btn btn-primary">Service Request</Button>
               </DialogTrigger>
               <DialogContent className="max-w-5xl">
                 <DialogTitle className="text-slate-700">Get the list of best <span className="text-xl text-indigo-500">Water Purifier Repair & Services </span></DialogTitle>

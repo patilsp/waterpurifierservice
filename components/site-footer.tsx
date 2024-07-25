@@ -8,7 +8,7 @@ import { CommandMenu } from "@/components/command-menu";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-5 block py-2 md:hidden">
+    <footer className="block py-2 md:hidden">
       <div className="fixed bottom-0 z-50 w-full border-t border-gray-200 bg-white py-2 dark:border-gray-600 dark:bg-gray-700">
         <div className="mx-auto grid h-full max-w-lg grid-cols-5">
          
@@ -54,6 +54,30 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-col items-center justify-between gap-4 sm:hidden">
+            <p className="text-center text-sm leading-loose text-white">
+              Built by{" "}
+              <a
+                href="/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium underline underline-offset-4"
+              >
+                Santosh Patil
+              </a>
+              . The source code is <br /> available on{" "}
+              <a
+                href="/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium underline underline-offset-4"
+              >
+                GitHub
+              </a>
+              .
+            </p>
+          </div>
     </footer>
   );
 }
