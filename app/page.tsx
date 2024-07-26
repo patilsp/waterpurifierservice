@@ -3,7 +3,8 @@ import Banner from "@/components/banner";
 import Hero from "@/components/hero";
 import LogoTicker from "@/components/LogoTicker";
 import Pricing from "@/components/Pricing";
-import { Footer } from "@/components/Footer"
+import { Footer } from "@/components/Footer";
+import Service from "@/components/Service";
 
 export default function IndexPage() {
   return (
@@ -11,6 +12,8 @@ export default function IndexPage() {
     
     <Banner />
     <LogoTicker />
+    
+    <Service />
     <Pricing />
     <Hero />
     <Footer />

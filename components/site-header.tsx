@@ -10,11 +10,15 @@ import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/registry/new-york/ui/button";
-import { UserButton, useAuth, useUser } from "@clerk/nextjs";
+import { UserButton, useAuth, useUser, SignIn } from "@clerk/nextjs";
 
 export function SiteHeader() {
   const { isLoaded, userId, sessionId, getToken } = useAuth();
   const { isSignedIn, user } = useUser();
+
+  if (!user) {
+    return;
+  }
 
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-50 w-full border-b bg-background/95 shadow backdrop-blur">
