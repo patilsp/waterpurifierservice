@@ -155,13 +155,7 @@ export default function Banner() {
               <div className="relative flex justify-center overflow-hidden">
                 
                 <div className="animate-marquee flex flex-nowrap gap-14">
-                  <Image
-                    src="/assets/logo-pulse.png"
-                    width={50}
-                    height={50}
-                    alt="brand image"
-                    className="h-7 w-auto px-4"
-                  />
+                 
                   <Image
                     src={zerobImage}
                     width={50}
