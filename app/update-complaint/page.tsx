@@ -27,10 +27,9 @@ const UpdateComplaint = () => {
   useEffect(() => {
     const getComplaintDetails = async () => {
       try {
-        // console.log(`Fetching data from: /api/complaint/${complaintId}`); // Add this line
-        const response = await fetch(`/api/complaint/${complaintId}`);
+        const response = await fetch(`/api/complaint`);
         if (!response.ok) {
-          const errorMessage = await response.text(); // Read error message from response
+          const errorMessage = await response.text(); 
           throw new Error(errorMessage || "Network response was not ok");
         }
         const data = await response.json();
@@ -40,11 +39,30 @@ const UpdateComplaint = () => {
         toast.error(`Failed to fetch complaint: ${error.message}`); // Show error message in toast
       }
     };
-    
 
     if (complaintId) getComplaintDetails();
   }, [complaintId]);
 
+  
+  useEffect(() => {
+    const getCustomerDetails = async () => {
+      try {
+        const response = await fetch(`/api/customer`); 
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Failed to fetch customers:", error);
+      }
+    };
+
+    if (customerId) getCustomerDetails();
+  }, [customerId]);
+
+
+  
 
   const updateComplaint = async (e) => {
     e.preventDefault();
@@ -63,7 +81,7 @@ const UpdateComplaint = () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                name: complaint.name,
+                username: complaint.username,
                 productType: complaint.productType,
                 complaintType: complaint.complaintType,
                 mobile: complaint.mobile,

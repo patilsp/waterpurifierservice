@@ -80,8 +80,13 @@
   }
   
 }
+.text_primary {
+  color: #ff8142 !important;
+}
 
-
+.text-shadow{
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
 .btn-primary{
   color: #fff;
   background-color: #121212;
