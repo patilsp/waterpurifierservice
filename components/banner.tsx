@@ -136,8 +136,8 @@ export default function Banner() {
                   <Image
                     src="/images/image-1.png"
                     alt="banner"
-                    height={560}
-                    width={560}
+                    height={260}
+                    width={260}
                     objectFit="contain"
                     className="h-full w-auto max-w-none md:absolute md:left-10"
                   />
