@@ -99,13 +99,13 @@ export default function CustomerPage() {
         <div className="flex-1 space-y-4 pt-6">          
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             {statusTypes.map((statusType) => (
-              <Card className="">
+              <Card className="card rounded">
                 <div
                     key={statusType.value}
-                    className={`p-4 rounded-lg cursor-pointer ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-gray-100'}`}
+                    className={`cursor-pointer rounded p-4 ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-white'}`}
                     onClick={() => handleStatusClick(statusType.value)}
                   >    
-                    <CardContent className="flex justify-between items-center gap-3">              
+                    <CardContent className="flex items-center justify-between gap-3">              
                         <h2 className="text-sm font-bold">{statusType.label}</h2>
                         <p className="text-xl font-bold text-muted-foreground">{statusCounts[statusType.value]}</p>
                     </CardContent>              

@@ -78,17 +78,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
 
     <section className="flex w-full justify-center p-1 md:px-4">
     <div className="container flex flex-col items-center justify-center gap-6 p-1 lg:flex-row lg:p-8">
-      {/* Image Section */}
-      {/* <div className="hidden w-full overflow-hidden md:block lg:w-1/2">
-        <Image
-          src="/images/counting.png"
-          alt="work"
-          width={500}
-          height={500}
-          className="object-cover p-10"
-        />
-      </div> */}
-
+      
       {/* Form Section */}
       <div className="w-full rounded-lg border bg-white shadow-lg lg:w-1/2">
         <div className="p-5">
