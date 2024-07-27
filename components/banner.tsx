@@ -86,7 +86,7 @@ export default function Banner() {
             >
               Experience pure and fresh water with our advanced purification services. Reliable solutions for your home and office.
             </motion.p>
-            <div className="mt-7 flex flex-col gap-2 md:flex-row">
+            <div className="mt-7 flex gap-2 md:flex-row">
               <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger asChild>
                   <Button className="btn btn-primary">Service Request</Button>
@@ -147,11 +147,11 @@ export default function Banner() {
           </div>
         </div>  
       </div>
-
+      <div className="container px-4">
   
         
-          <div className="bg-white p-2 md:p-6">
-            <div className="container">              
+          <div className=" p-2 md:p-6">
+            <div className="container mt-5">              
               <div className="relative flex justify-center overflow-hidden">
                 
                 <div className="animate-marquee flex flex-nowrap gap-14">
@@ -197,10 +197,10 @@ export default function Banner() {
             
          
           <div className="container mt-10">
-            <div className="flex flex-col items-center justify-center rounded-lg bg-[#4548b9] p-4 md:flex-row md:p-8">
+            <div className="flex flex-col items-center justify-center rounded-lg p-4 md:flex-row md:p-8">
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-                <div className="relative overflow-hidden rounded-lg border p-2 hover:border-[#0000ff] hover:shadow-lg">
-                  <div className="flex flex-row items-center gap-2 rounded-md p-4">
+                <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#4548b9] hover:shadow-lg">
+                  <div className="flex flex-row items-center gap-2 rounded-md  p-4">
                     <ShieldCheck className="size-8 text-white"/>
                     <div className="space-y-2">
                       <h1 className="text-sm font-bold text-white">
@@ -210,7 +210,7 @@ export default function Banner() {
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-lg border p-2 hover:border-[#0000ff] hover:shadow-lg">
+                <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#0000ff] hover:shadow-lg">
                   <div className="flex flex-row items-center gap-2 rounded-md p-4">
                     <Settings className="size-8 text-white"/>
                     <div className="space-y-2">
@@ -221,7 +221,7 @@ export default function Banner() {
                   </div>
                 </div>
                 
-                <div className="relative overflow-hidden rounded-lg border p-2 hover:border-[#0000ff] hover:shadow-lg">
+                <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#0000ff] hover:shadow-lg">
                   <div className="flex flex-row items-center gap-2 rounded-md p-4">
                     <ThumbsUp className="size-8 text-white"/>
                     <div className="space-y-2">
@@ -231,7 +231,7 @@ export default function Banner() {
                     </div>
                   </div>
                 </div>
-                <div className="relative overflow-hidden rounded-lg border p-2 hover:border-[#0000ff] hover:shadow-lg">
+                <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#0000ff] hover:shadow-lg">
                   <div className="flex flex-row items-center gap-2 rounded-md p-4">
                     <Users className="size-8 text-white"/>
                     <div className="space-y-2">
@@ -250,6 +250,7 @@ export default function Banner() {
         <div className="relative hidden h-screen w-full bg-cover bg-center py-5 md:block" style={{ backgroundImage: 'url(/images/banner-bg.jpg)' }}>
           <div className="absolute inset-0  opacity-50"></div>
           </div>
+    </div>
     </section>
   );
 }

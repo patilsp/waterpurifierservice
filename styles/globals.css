@@ -73,78 +73,9 @@
     @apply bg-background text-foreground text-xs;
   }
 }
-@layer components {
-
-  h1 {
-    @apply text-2xl font-extrabold uppercase bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent ml-1 mt-2 mb-1 transition-all duration-200;
-  }
-  
-}
-.text_primary {
-  color: #ff8142 !important;
-}
-
-.text-shadow{
-  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
-}
-.btn-primary{
-  color: #fff;
-  background-color: #121212;
-  box-shadow: 0 .3259259164px .7333333492px 0 #0000001f, 0 1.5407407284px 2.8666665554px 0 #00000012, 0 4px 9px 0 #0000000d;
-}
-
-
-.text-primary{
-  color: #f7f7f7;
-}
-.link-container {
-  display: flex;
-  justify-content: center;
-  background-color: #f3f4f6; /* Light gray background */
-  padding: 10px 0; /* Adjust padding as needed */
-}
-
-.link {
-  font-size: 12px;
-  color: #718096; 
-  text-decoration: none;  
-  transition: color 0.3s ease; 
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  cursor: pointer;
-  transition-property: color;
-  transition-duration: .2s;
-  transition-timing-function: ease;
-}
-
-.link:hover {
-  background-color: #ced1d6;
-  border-radius: 50px; 
-}
-
-.link.active {
-  font-weight: bold;
-  color: #2d3748;
-  font-size: 13px;
-}
-
-/* .cl-internal-1fsg6zy{
-  background-color: rgb(107, 62, 148);
-} */
 
 html {
   scroll-behavior: smooth;
-}
-
-.max-w-screen {
-  @apply max-w-screen-xl mx-auto px-4;
-}
-
-.nav-top {
-  @apply border-b dark:border-gray-800;
-  animation: 0.4s smoothScroll forwards;
 }
 
 @keyframes smoothScroll {
@@ -155,10 +86,6 @@ html {
   100% {
     transform: translateY(0);
   }
-}
-
-.head_text{
-  font-weight: 600;
 }
 
 .cl-internal-1vi7rps {
@@ -205,10 +132,6 @@ html {
     background-color: transparent !important;
     border: 2px solid white !important;
     backdrop-filter: blur(10px);
-}
-
-.logo-tricker-image{
-  @apply h-8 w-auto;
 }
 
 
@@ -360,13 +283,16 @@ p.label {
 }
 
 .card-footer {
-  height: 40px;
+  height: 50px;
   display: flex;
   align-items: center;
   gap: 25px;
-  margin-top: 10px;
-  padding: 0 7px;
+  padding: 0px 15px;
   background: #F8F8F8;
+  position: sticky;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: 999;
 }
 
 .card .action {

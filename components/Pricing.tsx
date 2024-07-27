@@ -19,7 +19,7 @@ export default function Pricing() {
             <div className="container grid grid-cols-1 gap-6 py-8 md:max-w-5xl md:grid-cols-3 md:py-12 lg:py-24">
                 {/* Pricing Card 1 */}
                 <div className="w-full md:col-span-1">
-                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-orange-500">
+                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-orange-500 dark:bg-gray-900">
                         <div className="grid gap-6">
                             <h3 className="text-xl font-bold sm:text-2xl">
                                 $99 <span className="text-sm text-gray-500">/Year</span>
@@ -86,7 +86,7 @@ export default function Pricing() {
 
                 {/* Pricing Card 3 */}
                 <div className="w-full md:col-span-1">
-                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-orange-500">
+                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-orange-500 dark:bg-gray-900">
                         <div className="grid gap-6">
                             <h3 className="text-xl font-bold sm:text-2xl">
                                 $199 <span className="text-sm text-gray-500">/Year</span>
