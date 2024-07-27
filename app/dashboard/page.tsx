@@ -30,7 +30,7 @@ import { useRouter } from "next/navigation";
 
 const statusTypes = [
   { value: 'all', label: 'Total Complaints' },
-  { value: 'warranty', label: 'Warranty' },
+  { value: 'Warranty', label: 'Warranty' },
   { value: 'Out Of Warranty', label: 'Out of Warranty' },
   { value: 'completed', label: 'Completed' },
 ];
@@ -44,7 +44,9 @@ export default function DashboardPage() {
   const router = useRouter();
   const { isLoaded, userId, isSignedIn, user } = useUser();
 
-  const userName = user?.fullName || "User Name";
+  console.log(user);
+
+  const userName = user?.fullName || "";
 
   const fetchComplaints = async () => {
     setLoading(true);
@@ -63,7 +65,7 @@ export default function DashboardPage() {
       // Calculate counts
       const counts = {
         all: transformedComplaints.length,
-        warranty: transformedComplaints.filter(c => c.status === 'warranty').length,
+        Warranty: transformedComplaints.filter(c => c.status === 'Warranty').length,
         'Out Of Warranty': transformedComplaints.filter(c => c.status === 'Out Of Warranty').length,
         canceled: transformedComplaints.filter(c => c.status === 'canceled').length,
         completed: transformedComplaints.filter(c => c.status === 'completed').length,

@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             {/* <img src="#" className="mr-5 h-6 sm:h-9" alt="logo" /> */}
             <p className="mt-4 max-w-xs text-sm text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+            Excellent services Chokhale college chowk, Mangalwar peth Kolhapur -416012            
             </p>
             <div className="mt-8 flex space-x-6 text-gray-600">
               <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">

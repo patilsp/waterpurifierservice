@@ -17,10 +17,10 @@ import {
 
 const statusTypes = [
   { value: 'all', label: 'Total Complaints' },
-  { value: 'warranty', label: 'Warranty' },
+  { value: 'Warranty', label: 'Warranty' },
   { value: 'Out Of Warranty', label: 'Out of Warranty' },
-  { value: 'canceled', label: 'Cancelled' },
-  { value: 'completed', label: 'Completed' },
+  { value: 'Cancelled', label: 'Cancelled' },
+  { value: 'Completed', label: 'Completed' },
 ];
 
 export default function CustomerPage() {  
@@ -49,10 +49,10 @@ export default function CustomerPage() {
       // Calculate counts
       const counts = {
         all: transformedComplaints.length,
-        warranty: transformedComplaints.filter(c => c.status === 'warranty').length,
+        Warranty: transformedComplaints.filter(c => c.status === 'Warranty').length,
         'Out Of Warranty': transformedComplaints.filter(c => c.status === 'Out Of Warranty').length,
-        canceled: transformedComplaints.filter(c => c.status === 'canceled').length,
-        completed: transformedComplaints.filter(c => c.status === 'completed').length,
+        Canceled: transformedComplaints.filter(c => c.status === 'Canceled').length,
+        Completed: transformedComplaints.filter(c => c.status === 'Completed').length,
       };
       setStatusCounts(counts);
     } catch (error) {

@@ -14,7 +14,7 @@ export default function Hero() {
 
     <div className="container space-y-6  py-8 dark:bg-gray-900 md:py-12 lg:py-24">
       <div className="mx-auto flex max-w-5xl flex-col items-center space-y-4 text-center">
-        <h1 className="font-fold text-4xl leading-[1.1] md:text-8xl">
+        <h1 className="font-fold text-4xl leading-[1.1] md:text-6xl">
           Our Features
         </h1>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">

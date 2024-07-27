@@ -12,7 +12,10 @@ import {
 
 export default function Guide() {
     return (
-        <section className="space-y-6 bg-slate-100 py-8 dark:bg-slate-900 dark:text-white md:py-12 lg:py-24">
+
+       
+
+        <section className="space-y-6 bg-slate-100 py-2 dark:bg-slate-900 dark:text-white md:py-12 lg:py-24">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}

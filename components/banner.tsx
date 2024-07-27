@@ -18,7 +18,7 @@ import {
   DialogTrigger,
 } from "@/registry/new-york/ui/dialog";
 
-import bannerImage from '../public/images/banner2.webp';
+import bannerImage from '../public/images/banner.webp';
 import zerobImage from '../public/icons/zerob.webp';
 import eurekaImage from '../public/icons/eureka.webp';
 import { ShieldCheck, ThumbsUp, Settings, ArrowRight, Users } from "lucide-react";
@@ -136,10 +136,10 @@ export default function Banner() {
                   <Image
                     src="/images/image-1.png"
                     alt="banner"
-                    height={260}
-                    width={260}
+                    height={560}
+                    width={560}
                     objectFit="contain"
-                    className="md:absolute md:left-10 md:h-full md:w-auto md:max-w-none"
+                    className="h-full w-auto max-w-none md:absolute md:left-10"
                   />
                 </div>
               </motion.div>
@@ -147,7 +147,7 @@ export default function Banner() {
           </div>
         </div>  
       </div>
-      <div className="container px-4">
+      <div className="container-fluid">
   
         
           <div className=" p-2 md:p-6">
