@@ -88,6 +88,10 @@ html {
   }
 }
 
+.text-shadow{
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+
 .cl-internal-1vi7rps {
   width: 250px !important;
   border-radius: 8px !important;
