@@ -21,7 +21,7 @@ export function DataTableToolbar<TData>({
 
   return (
     <div className="flex items-center justify-between">
-      <h1 className="text-xl font-semibold">Complaints Status</h1>
+      <h1 className="text-sm font-semibold md:text-xl">Complaints Status</h1>
       <div className="flex items-center space-x-2">
         <Input
           placeholder="Search Complaints..."

@@ -16,9 +16,9 @@ export function SiteHeader() {
   const { isLoaded, userId, sessionId, getToken } = useAuth();
   const { isSignedIn, user } = useUser();
 
-  if (!user) {
-    return;
-  }
+  // if (!user) {
+  //   return;
+  // }
 
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-50 w-full border-b bg-background/95 shadow backdrop-blur">

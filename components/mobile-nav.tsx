@@ -43,14 +43,14 @@ export function MobileNav() {
           className="flex items-start p-4"
           onOpenChange={setOpen}
         >
-          <Image
+          {/* <Image
             src={userProfileImage}
             className="mr-1 size-8 rounded-lg border border-white object-contain "
             width={70}
             height={70}
             alt="user profile image"
            
-          />
+          /> */}
           <div className="grid gap-1">
             <span className="text_primary ml-3 text-2xl font-bold">{userName}</span>
             <span className="ml-3 text-sm font-bold text-gray-600">{userMobile}</span>
