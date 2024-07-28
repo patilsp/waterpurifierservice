@@ -25,18 +25,18 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
         </div>
 
         {/* Form Section */}
-        <div className="w-full rounded-lg border bg-white shadow-lg lg:w-1/2">
+        <div className="glassmorphism w-full rounded-lg border shadow-lg dark:bg-slate-900 dark:text-white lg:w-1/2">
           <div className="p-4">
             <h1 className='head_text text-center'>
               <span className='green_gradient text-xl font-bold'>{type} Product</span>
             </h1>
-            <p className='py-1 text-center text-sm text-slate-600'>
+            <p className='py-1 text-center text-sm text-slate-600 dark:text-gray-200'>
               Create and Update product here
             </p>
           </div>
           <motion.form
             onSubmit={handleSubmit}
-            className='glassmorphism mt-2 flex w-full flex-col gap-4 p-4'
+            className='mt-2 flex w-full flex-col gap-4 p-4'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -50,7 +50,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                   onChange={(e) => setProduct({ ...product, name: e.target.value })}
                   placeholder='Enter product Name'
                   required
-                  className='input'
+                  className='border-white'
                 />
               </div>
              
@@ -59,10 +59,10 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                 <Input
                   value={product.price}
                   onChange={(e) => setProduct({ ...product, price: e.target.value })}
-                  placeholder='Enter product price'                  
+                  placeholder='Enter price'                  
                   type='number'
                   step='0.01'
-                  className='input'
+                  className='border-white'
                 />
               </div>
               <div className="grid gap-2">
@@ -72,7 +72,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                   onChange={(e) => setProduct({ ...product, model: e.target.value })}
                   placeholder='Enter product model'
                   required
-                  className='input'
+                  className='border-white'
                 />
               </div>
               <div className="grid gap-2">
@@ -81,7 +81,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                   value={product.capacity}
                   onChange={(e) => setProduct({ ...product, capacity: e.target.value })}
                   placeholder='Enter product capacity'                  
-                  className='input'
+                  className='border-white'
                 />
               </div>
               <div className="grid gap-2">
@@ -90,7 +90,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                   value={product.technology}
                   onChange={(e) => setProduct({ ...product, technology: e.target.value })}
                   placeholder='Enter product technology'                  
-                  className='input'
+                  className='border-white'
                 />
               </div>
               <div className="grid gap-2">
@@ -99,7 +99,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                   value={product.warranty}
                   onChange={(e) => setProduct({ ...product, warranty: e.target.value })}
                   placeholder='Enter product warranty'                  
-                  className='input'
+                  className='border-white'
                 />
               </div>
              
@@ -110,7 +110,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
                   value={product.description}
                   onChange={(e) => setProduct({ ...product, description: e.target.value })}
                   placeholder='Enter product description'                  
-                  className='form_textarea'
+                  className='form_textarea border-white'
                 />
               </div>
             <div className='mt-6 flex justify-center gap-4'>
@@ -121,7 +121,7 @@ const ProductForm = ({ type, product, setProduct, submitting, handleSubmit }) =>
               <Button
                 type='submit'
                 disabled={submitting}
-                className='rounded bg-primary px-5 py-2 text-sm text-white'
+                className='rounded bg-primary px-5 py-2 text-sm text-white dark:text-black'
               >
                 {submitting ? `${type}ing...` : type}
               </Button>

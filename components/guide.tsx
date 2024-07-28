@@ -57,7 +57,7 @@ export default function Guide() {
 
                                                 {/* Step 2 */}
                                                 <div className="mb-10 flex gap-4 pr-4">
-                                                    <div className="bg1 flex items-end justify-end rounded-full bg-gray-200 p-4">
+                                                    <div className="bg1 flex items-end justify-end rounded-full bg-gray-200 p-4 dark:bg-slate-700">
                                                         <User className="text_primary size-6"/>
                                                     </div>
                                                     <div className="">
@@ -68,7 +68,7 @@ export default function Guide() {
 
                                                 {/* Step 3 */}
                                                 <div className="mb-10 flex gap-4 pr-4">
-                                                    <div className="bg1 flex items-end justify-end rounded-full bg-gray-200 p-4">
+                                                    <div className="bg1 flex items-end justify-end rounded-full bg-gray-200 p-4 dark:bg-slate-700">
                                                         <MapPin className="text_primary size-6"/>
                                                     </div>
                                                     <div className="">
@@ -79,7 +79,7 @@ export default function Guide() {
 
                                                 {/* Step 4 */}
                                                 <div className="mb-10 flex gap-4 pr-4">
-                                                    <div className="bg1 flex items-end justify-end rounded-full bg-gray-200 p-4">
+                                                    <div className="bg1 flex items-end justify-end rounded-full bg-gray-200 p-4 dark:bg-slate-700">
                                                         <Bookmark className="text_primary size-6"/>
                                                     </div>
                                                     <div className="">

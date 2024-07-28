@@ -84,13 +84,13 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
 
   
   return (
-    <section className="relative flex h-screen justify-center bg-cover bg-center py-5" style={{ backgroundImage: 'url(/images/banner1.jpg)' }}>
+    <section className="relative flex h-screen justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/images/banner1.jpg)' }}>
       <div className="absolute inset-0 opacity-50"></div>
       <div className="w-full p-4 md:w-1/2">
         <div className="mt-10 p-4">
           <motion.form
             onSubmit={handleSubmit}
-            className='glassmorphism mt-2 flex w-full flex-col gap-4 rounded-lg border bg-transparent p-4 text-slate-800 shadow'
+            className='glassmorphism mt-2 flex w-full flex-col gap-4 rounded-lg border bg-transparent p-4 text-slate-800 shadow dark:bg-slate-900 dark:text-white'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -105,9 +105,8 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
                 id="username"
                 value={post.username}
                 onChange={(e) => setPost({ ...post, username: e.target.value })}
-                placeholder='Enter username'
-                required
-                className='input'
+                placeholder='Enter username'  
+                className='input border-white'
               />
             </div>
 
@@ -119,8 +118,7 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
                   value={post.email}
                   onChange={(e) => setPost({ ...post, email: e.target.value })}
                   placeholder='Enter email'
-                  required
-                  className='input'
+                 className='input border-white'
                 />
               </div>
 
@@ -133,8 +131,7 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
                   value={post.phone}
                   onChange={(e) => setPost({ ...post, phone: e.target.value })}
                   placeholder='Enter phone number'
-                  required
-                  className='input'
+                  className='input border-white'
                 />
               </div>
             </div>
@@ -148,7 +145,7 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
               <div className="grid w-full gap-2">
                 <Label htmlFor="role">Role</Label>
                 <Select defaultValue={post.role || "User"} onValueChange={handleRoleChange}>
-                  <SelectTrigger className="line-clamp-1 w-full truncate">
+                  <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                     <SelectValue placeholder="Select Role" />
                   </SelectTrigger>
                   <SelectContent>

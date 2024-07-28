@@ -73,10 +73,10 @@ export default function Banner() {
       <div className="container px-4">
         <div className="md:flex md:items-center">
           <div className="md:w-[478px]">
-            <div className="inline-flex rounded border border-[#222]/10 bg-slate-200 px-3 py-1 text-sm tracking-tighter">
+            <div className="inline-flex rounded border border-[#222]/10 bg-slate-200 px-3 py-1 text-sm tracking-tighter dark:bg-slate-600">
               - Your Trusted Water Purification Partner
             </div>
-            <h1 className="text-shadow mt-6 bg-gradient-to-b from-black to-[#001E80] bg-clip-text text-5xl font-bold tracking-tighter text-transparent">
+            <h1 className="text-shadow mt-6 bg-gradient-to-b from-black to-[#001E80] bg-clip-text text-4xl font-bold tracking-tighter text-transparent">
               Clean and  <span className="text-primary1">Safe Water</span> <br className="hidden sm:inline" />
               <span className="text-primary1">Purification</span> Solutions
             </h1>

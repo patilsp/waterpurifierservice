@@ -7,7 +7,7 @@ import Guide from "@/components/guide";
 
 export default function IndexPage() {
   return (
-   <div className="mb-4">
+   <div className="">
     
     <Banner />    
     {/* <Service /> */}

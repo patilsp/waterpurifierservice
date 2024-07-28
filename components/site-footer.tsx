@@ -8,12 +8,12 @@ import { CommandMenu } from "@/components/command-menu";
 
 export function SiteFooter() {
   return (
-    <footer className="block py-2 md:hidden">
-      <div className="fixed bottom-0 z-50 w-full border-t border-gray-200 bg-white py-2 dark:border-gray-600 dark:bg-gray-700">
+    <footer className="block dark:bg-slate-900 dark:text-white md:hidden">
+      <div className="fixed bottom-0 z-50 w-full border-t border-gray-200 bg-white py-2 dark:border-gray-600 dark:bg-slate-900 dark:text-white">
         <div className="mx-auto grid h-full max-w-lg grid-cols-5">
          
           <a href="/" data-tooltip-target="tooltip-home" className="group inline-flex flex-col items-center justify-center p-2 hover:bg-gray-50 dark:hover:bg-gray-800">
-            <Home className="mb-1 size-6 text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-500" />
+            <Home className="mb-1 size-6  text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-500" />
             <span className="sr-only">Home</span>
           </a>
           <div id="tooltip-home" role="tooltip" className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700">

@@ -73,13 +73,13 @@ const CustomerForm = ({ type, post, setPost, submitting, handleSubmit }) => {
   };
 
   return (
-    <section className='mb-5 flex w-full max-w-full flex-col items-center justify-center px-4'>
-      <h1 className='head_text mt-2 text-center text-xl text-indigo-500'>
+    <section className='mb-5 flex w-full max-w-full flex-col items-center justify-center px-4 py-2'>
+      <h1 className='head_text mt-4 text-center text-xl text-indigo-500'>
         {type} Customer
       </h1>
       <form
         onSubmit={handleSubmit}
-        className='glassmorphism mt-5 flex w-full max-w-2xl flex-col gap-5 rounded-lg border border-gray-200 p-8 shadow-lg md:w-3/4 lg:w-1/2'
+        className='glassmorphism mt-5 flex w-full max-w-2xl flex-col gap-4 rounded-lg border border-gray-200 p-8 shadow-lg dark:bg-slate-900 dark:text-white md:w-3/4 lg:w-1/2'
       >
         <div className="grid gap-2">
           <Label htmlFor="name">Name</Label>

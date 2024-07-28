@@ -76,7 +76,7 @@ export default function CustomerPage() {
   };
 
   return (
-    <div className="h-full flex-1 flex-col space-y-8 p-4 md:p-8">
+    <div className="h-full flex-1 flex-col space-y-8 p-4 dark:bg-slate-900 dark:text-white md:p-8">
       <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between">
         <div>
           <h2 className="text-xl font-bold md:text-2xl">Welcome back!</h2>
@@ -95,9 +95,9 @@ export default function CustomerPage() {
       <div className="flex-col space-y-4">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           {statusTypes.map((statusType) => (
-            <Card key={statusType.value} className="rounded-md shadow-sm">
+            <Card key={statusType.value} className="rounded-md shadow-sm dark:bg-slate-700">
               <div
-                className={`cursor-pointer rounded p-4 ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-white'}`}
+                className={`cursor-pointer rounded p-4 ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-white dark:bg-slate-700'}`}
                 onClick={() => handleStatusClick(statusType.value)}
               >
                 <CardContent className="flex items-center justify-between">

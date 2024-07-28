@@ -67,11 +67,11 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
 
-          <div className="card ">
+          <div className="card dark:bg-slate-900 dark:text-white">
             <div className="results">
               <p className="label mt-4">Available Options</p>
 
-              <CommandGroup className="py-3">
+              <CommandGroup className="py-3 ">
                 {docsConfig.mainNav
                   .filter((navitem) => !navitem.external)
                   .map((navItem) => (
@@ -84,8 +84,9 @@ export function CommandMenu({ ...props }: DialogProps) {
                       }}
                     >
                       <div className="results-list">
-                        <div className="entry">
-                          <div className="icon">
+                        <div className="entry ">
+                        <div className="flex size-10 items-center justify-center rounded-lg bg-gray-200 transition-all duration-200 ease-in-out dark:bg-gray-600">
+
                             <svg
                               fill="none"
                               viewBox="0 0 24 24"
@@ -161,8 +162,8 @@ export function CommandMenu({ ...props }: DialogProps) {
                               ></path>
                             </svg>
                           </div>
-                          <div className="desc ">
-                            <label>{navItem.title}</label>
+                          <div className="flex flex-col justify-center gap-1.5">
+                            <label className="dark:text-white">{navItem.title}</label>
                           </div>
                         </div>
                       </div>
@@ -175,7 +176,7 @@ export function CommandMenu({ ...props }: DialogProps) {
 
           <CommandSeparator />
        
-          <div className="card-footer">
+          <div className="card-footer dark:bg-slate-900 dark:text-white">
               <div className="action">
                 <button type="button">
                   <svg

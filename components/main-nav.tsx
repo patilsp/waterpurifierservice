@@ -98,12 +98,12 @@ const ListItem = React.forwardRef<
         <motion.a
           ref={ref}
           className={cn(
-            "hover:text-bold block select-none rounded-md p-4 leading-none text-[#050505] no-underline outline-none transition-colors duration-700 ease-in hover:bg-gray-200 focus:bg-gray-300 focus:text-white",
+            "hover:text-bold block select-none rounded-md p-4 leading-none text-[#050505] no-underline outline-none transition-colors duration-700 ease-in hover:bg-gray-200 focus:bg-gray-300 focus:text-white dark:text-white dark:hover:bg-slate-800",
             className
           )}
           whileHover={{ scale: 1.05, rotate: 0 }}  // Added rotation effect on hover
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 100 }}  // Smooth transition
+          whileTap={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 50 }}  // Smooth transition
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>

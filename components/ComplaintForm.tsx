@@ -80,12 +80,12 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
     <div className="container flex flex-col items-center justify-center gap-6 p-1 lg:flex-row lg:p-8">
       
       {/* Form Section */}
-      <div className="glassmorphism w-full  rounded-lg border bg-white shadow-lg lg:w-1/2">
+      <div className="glassmorphism w-full rounded-lg border bg-white shadow-lg dark:bg-slate-900 dark:text-white lg:w-1/2">
         <div className="p-5">
           <h1 className='head_text text-center'>
-            <span className='green_gradient text-xl font-bold'>{type} Complaint</span>
+            <span className='green_gradient text-2xl font-bold'>{type} Complaint</span>
           </h1>
-          <p className='py-1 text-center text-sm text-slate-600'>
+          <p className='py-1 text-center text-sm text-slate-600 dark:text-gray-50'>
             Create and Update Complaint here
           </p>
         </div>
@@ -156,7 +156,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
       
             <div className="grid w-full gap-2">
               <Label htmlFor="visitDate">Visit Date</Label>
-              <DatePickerDemo className="border-white" date={date} setDate={setDate} />
+              <DatePickerDemo className="border border-white" date={date} setDate={setDate} />
             </div>
             <div className="grid w-full gap-2">
             <Label htmlFor="status">Status</Label>
@@ -193,7 +193,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
             <Button
               type='submit'
               disabled={submitting}
-              className='rounded bg-primary px-5 py-2 text-sm text-white'
+              className='rounded bg-primary px-5 py-2 text-sm text-white dark:text-black'
             >
               {submitting ? `${type}ing...` : type}
             </Button>
