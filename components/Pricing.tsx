@@ -12,14 +12,14 @@ export default function Pricing() {
                 </h1>
                 <p className="font-heading text-3xl font-bold leading-[1.1]">
                     Choose Your AMC Plan <br />
-                    <span className="text-orange-500">For Your Water Purifier</span>
+                    <span className="text-blue-600">For Your Water Purifier</span>
                 </p>
             </div>
 
             <div className="container grid grid-cols-1 gap-6 py-8 md:max-w-5xl md:grid-cols-3 md:py-12 lg:py-24">
                 {/* Pricing Card 1 */}
                 <div className="w-full md:col-span-1">
-                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-orange-500 dark:bg-gray-900">
+                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-[#4548b9] dark:bg-gray-900">
                         <div className="grid gap-6">
                             <h3 className="text-xl font-bold sm:text-2xl">
                                 $99 <span className="text-sm text-gray-500">/Year</span>
@@ -43,7 +43,7 @@ export default function Pricing() {
                             </ul>
                         </div>
                         <div className="mt-10 flex flex-col gap-4 text-center">
-                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-400 hover:text-white hover:opacity-80">
+                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-[#4548b9] hover:text-white hover:opacity-80">
                                 Choose Plan
                             </Link>
                         </div>
@@ -52,7 +52,7 @@ export default function Pricing() {
 
                 {/* Pricing Card 2 */}
                 <div className="w-full md:col-span-1">
-                    <div className="grid w-full items-start rounded-lg border bg-orange-500 p-10 shadow hover:border-white">
+                    <div className="grid w-full items-start rounded-lg border bg-[#4548b9] p-10 shadow hover:border-white dark:bg-slate-900">
                         <div className="grid gap-6">
                             <h3 className="text-xl font-bold text-white sm:text-2xl">
                                 $149 <span className="text-sm text-gray-200">/Year</span>
@@ -77,7 +77,7 @@ export default function Pricing() {
                             </ul>
                         </div>
                         <div className="mt-10 flex flex-col gap-4 text-center">
-                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-400 hover:text-white hover:opacity-80">
+                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-[#4548b9] hover:text-white hover:opacity-80">
                                 Choose Plan
                             </Link>
                         </div>
@@ -86,7 +86,7 @@ export default function Pricing() {
 
                 {/* Pricing Card 3 */}
                 <div className="w-full md:col-span-1">
-                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-orange-500 dark:bg-gray-900">
+                    <div className="grid w-full items-start rounded-lg border bg-white p-10 hover:border-[#4548b9] dark:bg-gray-900">
                         <div className="grid gap-6">
                             <h3 className="text-xl font-bold sm:text-2xl">
                                 $199 <span className="text-sm text-gray-500">/Year</span>
@@ -111,7 +111,7 @@ export default function Pricing() {
                             </ul>
                         </div>
                         <div className="mt-10 flex flex-col gap-4 text-center">
-                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-400 hover:text-white hover:opacity-80">
+                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-[#4548b9] hover:text-white hover:opacity-80">
                                 Choose Plan
                             </Link>
                         </div>

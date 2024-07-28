@@ -35,7 +35,7 @@ export function SiteHeader() {
         
         <MainNav />
         
-        <MobileNav />
+        {/* <MobileNav /> */}
         
         <div className="flex flex-1 items-center justify-end  md:justify-end">
         {/* <CommandMenu /> */}

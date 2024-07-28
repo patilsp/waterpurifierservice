@@ -44,8 +44,6 @@ export default function DashboardPage() {
   const router = useRouter();
   const { isLoaded, userId, isSignedIn, user } = useUser();
 
-  console.log(user);
-
   const userName = user?.fullName || "";
 
   const fetchComplaints = async () => {

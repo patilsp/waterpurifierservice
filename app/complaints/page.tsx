@@ -51,7 +51,7 @@ export default function CustomerPage() {
         all: transformedComplaints.length,
         Warranty: transformedComplaints.filter(c => c.status === 'Warranty').length,
         'Out Of Warranty': transformedComplaints.filter(c => c.status === 'Out Of Warranty').length,
-        Canceled: transformedComplaints.filter(c => c.status === 'Canceled').length,
+        Cancelled: transformedComplaints.filter(c => c.status === 'Cancelled').length,
         Completed: transformedComplaints.filter(c => c.status === 'Completed').length,
       };
       setStatusCounts(counts);
@@ -76,50 +76,44 @@ export default function CustomerPage() {
   };
 
   return (
-
-
-    <div className="h-full flex-1 flex-col space-y-8 p-8 md:flex">
-      <div className="flex items-center justify-between space-y-2">
+    <div className="h-full flex-1 flex-col space-y-8 p-4 md:p-8">
+      <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">Welcome back!</h2>
-          <p className="text-muted-foreground">
-            Here&apos;s a list of your Complaints for this month!
+          <h2 className="text-xl font-bold md:text-2xl">Welcome back!</h2>
+          <p className="text-sm text-muted-foreground md:text-base">
+            Heres a list of your complaints for this month!
           </p>
         </div>
-        <div className="ml-auto">
-          <Link href='create-complaint' className='inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'>
+        <div className="mt-4 md:mt-0">
+          <Link href='create-complaint' className='inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'>
             <PlusCircledIcon className="mr-2 size-4" />
             Add Complaint
-          </Link>           
+          </Link>
         </div>
       </div>
 
-
-      <div className="flex-col md:flex">        
-        <div className="flex-1 space-y-4 pt-6">          
+      <div className="flex-col space-y-4">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-            {statusTypes.map((statusType) => (
-              <Card className="card rounded">
-                <div
-                    key={statusType.value}
-                    className={`cursor-pointer rounded p-4 ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-white'}`}
-                    onClick={() => handleStatusClick(statusType.value)}
-                  >    
-                    <CardContent className="flex items-center justify-between gap-3">              
-                        <h2 className="text-sm font-bold">{statusType.label}</h2>
-                        <p className="text-xl font-bold text-muted-foreground">{statusCounts[statusType.value]}</p>
-                    </CardContent>              
-                  </div>
-                </Card>
-              ))}
-          </div>
+          {statusTypes.map((statusType) => (
+            <Card key={statusType.value} className="rounded-md shadow-sm">
+              <div
+                className={`cursor-pointer rounded p-4 ${selectedStatus === statusType.value ? 'bg-primary text-white' : 'bg-white'}`}
+                onClick={() => handleStatusClick(statusType.value)}
+              >
+                <CardContent className="flex items-center justify-between">
+                  <h2 className="text-sm font-bold">{statusType.label}</h2>
+                  <p className="text-lg font-bold text-muted-foreground">{statusCounts[statusType.value]}</p>
+                </CardContent>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
 
       {loading ? (
         <div className="flex h-32 items-center justify-center">
           <svg
-            className="size-8 animate-spin text-primary"
+            className="w-8 h-8 animate-spin text-primary"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
@@ -133,7 +127,9 @@ export default function CustomerPage() {
           </svg>
         </div>
       ) : (
-        <DataTable data={filteredComplaints} columns={columns} />
+        <div className="mt-6">
+          <DataTable data={filteredComplaints} columns={columns} />
+        </div>
       )}
     </div>
   );

@@ -17,12 +17,12 @@ export default function Hero() {
         <h1 className="font-fold text-4xl leading-[1.1] md:text-6xl">
           Our Features
         </h1>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="max-w-[50%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Discover the powerful features of our water purifier service app, designed to ensure clean and safe water for you and your family.
         </p>
       </div>
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3">
-        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-orange-500">
+        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-[#4548b9]">
           <div className="flex  flex-row items-start justify-between gap-4 rounded-md p-2">
             <ShieldCheck className="size-16 fill-current text-blue-500" />
             <div className="space-y-2">
@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-orange-500">
+        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-[#4548b9]">
           <div className="flex  flex-row items-start justify-between gap-4 rounded-md p-2">
             <ThumbsUp className="size-16 fill-current text-green-500" />
             <div className="space-y-2">
@@ -44,7 +44,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-orange-500">
+        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-[#4548b9]">
           <div className="flex  flex-row items-start justify-between gap-4 rounded-md p-2">
             <Users className="size-16 fill-current text-orange-500" />
             <div className="space-y-2">
@@ -55,7 +55,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-orange-500">
+        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-[#4548b9]">
           <div className="flex  flex-row items-start justify-between gap-4 rounded-md p-2">
             <ArrowRight className="size-16 fill-current text-red-500" />
             <div className="space-y-2">
@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-orange-500">
+        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-[#4548b9]">
           <div className="flex  flex-row items-start justify-between gap-4 rounded-md p-2">
             <ShieldCheck className="size-16 fill-current text-pink-500" />
             <div className="space-y-2">
@@ -77,7 +77,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-orange-500">
+        <div className="relative overflow-hidden rounded-lg border bg-background p-4 shadow hover:border-[#4548b9]">
           <div className="flex  flex-row items-start justify-between gap-4 rounded-md p-2">
             <Settings className="size-16 fill-current text-yellow-500" />
             <div className="space-y-2">
