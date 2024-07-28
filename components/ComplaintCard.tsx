@@ -25,13 +25,7 @@ const ComplaintCard = ({ complaint, handleEdit, handleDelete, handleTagClick }) 
 
   const [copied, setCopied] = useState("");
 
-  const handleComplaintClick = () => {
-    console.log('aaa');
-
-    if (complaint.userId === sessionId) return router.push("/profile");
-
-    router.push(`/profile/${complaint.userId}`);
-  };
+ 
 
   const handleCopy = () => {
     setCopied(complaint.name);
@@ -40,7 +34,7 @@ const ComplaintCard = ({ complaint, handleEdit, handleDelete, handleTagClick }) 
   };
 
   return (
-    <Card className="mx-auto mb-6 grid w-full cursor-pointer rounded-lg bg-gray-50 p-4 shadow-lg" onClick={handleComplaintClick}>
+    <Card className="mx-auto mb-6 grid w-full cursor-pointer rounded-lg bg-gray-50 p-4 shadow-lg">
       <CardHeader className="flex w-full justify-between gap-4">
         <div
           className="flex cursor-pointer items-center justify-between gap-3"

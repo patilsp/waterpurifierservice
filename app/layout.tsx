@@ -34,14 +34,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en">
+
+        
         
       <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+            "min-h-screen  font-sans antialiased",
             fontSans.variable
           )}
         >
+          <div className='main'>
+          <div className='gradient' />
+        </div>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />

@@ -47,9 +47,7 @@ export function MainNav() {
                   <ListItem href="/docs/installation" title="Installation">
                     How to install dependencies and structure your app.
                   </ListItem>
-                  <ListItem href="/docs/primitives/typography" title="Typography">
-                    Styles for headings, paragraphs, lists, etc.
-                  </ListItem>
+                 
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -105,7 +103,7 @@ const ListItem = React.forwardRef<
           )}
           whileHover={{ scale: 1.05, rotate: 0 }}  // Added rotation effect on hover
           whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 300 }}  // Smooth transition
+          transition={{ type: "spring", stiffness: 100 }}  // Smooth transition
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>

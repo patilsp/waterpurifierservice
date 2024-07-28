@@ -11,10 +11,13 @@ import { MobileNav } from "@/components/mobile-nav";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/registry/new-york/ui/button";
 import { UserButton, useAuth, useUser, SignIn } from "@clerk/nextjs";
+import { useRouter } from 'next/navigation'
 
 export function SiteHeader() {
   const { isLoaded, userId, sessionId, getToken } = useAuth();
   const { isSignedIn, user } = useUser();
+  const router = useRouter()
+
 
   // if (!user) {
   //   return;
@@ -40,10 +43,13 @@ export function SiteHeader() {
         <div className="flex flex-1 items-center justify-end  md:justify-end">
         {/* <CommandMenu /> */}
           {/* <ModeToggle /> */}
-          <Link href="/dashboard" className="mr-1 hidden justify-center rounded-md border bg-white p-1 px-2 font-medium  text-black shadow transition-colors   focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:flex">
+          {/* <Link href="/dashboard" className="mr-1 justify-center rounded-md border bg-white p-1 px-2 font-medium  text-black shadow transition-colors   focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:flex">
                 Dashboard
              
-            </Link>
+            </Link> */}
+            <button className="mr-1 justify-center rounded-md border bg-white px-2 text-sm font-medium  text-black shadow transition-colors   focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:flex" type="button" onClick={() => router.push('/dashboard')}>
+              Dashboard
+            </button>
 
           {userId == null ? (
             <Link href="/sign-in" className="mr-1 flex w-20 justify-center rounded-md border bg-white p-1 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">

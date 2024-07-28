@@ -80,7 +80,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
     <div className="container flex flex-col items-center justify-center gap-6 p-1 lg:flex-row lg:p-8">
       
       {/* Form Section */}
-      <div className="w-full rounded-lg border bg-white shadow-lg lg:w-1/2">
+      <div className="glassmorphism w-full  rounded-lg border bg-white shadow-lg lg:w-1/2">
         <div className="p-5">
           <h1 className='head_text text-center'>
             <span className='green_gradient text-xl font-bold'>{type} Complaint</span>
@@ -91,7 +91,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
         </div>
         <motion.form
           onSubmit={handleSubmit}
-          className='glassmorphism mt-2 flex w-full flex-col gap-4 p-4'
+          className='mt-2 flex w-full flex-col gap-4 p-4'
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -106,14 +106,14 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
             onChange={(e) => setComplaint({ ...complaint, name: e.target.value })}
             placeholder="Enter complaint name"
             required
-            className="input"
+            className="input border-white "
           />
         </div>
 
         <div className="grid gap-2">
             <Label htmlFor="product">Choose Product</Label>
             <Select value={complaint.productType} defaultValue={complaint.productType || "product-1"} onValueChange={handleProductTypeChange}>
-              <SelectTrigger className="line-clamp-1 w-full truncate">
+              <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                 <SelectValue placeholder="Select Product" />
               </SelectTrigger>
               <SelectContent>
@@ -128,7 +128,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
           <div className="grid w-full gap-2">
             <Label htmlFor="type">Call Service Type</Label>
             <Select value={complaint.complaintType} defaultValue={complaint.complaintType || "Installation"} onValueChange={handleServiceTypeChange}>
-              <SelectTrigger className="line-clamp-1 w-full truncate">
+              <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                 <SelectValue placeholder="Select Service Type" />
               </SelectTrigger>
               <SelectContent>
@@ -148,7 +148,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
               onChange={(e) => setComplaint({ ...complaint, mobile: e.target.value })}
               placeholder="Enter customer phone number"
               required
-              className="input"
+              className="input border-white"
             />
           </div>
      
@@ -156,12 +156,12 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
       
             <div className="grid w-full gap-2">
               <Label htmlFor="visitDate">Visit Date</Label>
-              <DatePickerDemo date={date} setDate={setDate} />
+              <DatePickerDemo className="border-white" date={date} setDate={setDate} />
             </div>
             <div className="grid w-full gap-2">
             <Label htmlFor="status">Status</Label>
             <Select  value={complaint.status} defaultValue={complaint.status || "Active"} onValueChange={handleStatusChange}>
-              <SelectTrigger className="line-clamp-1 w-full truncate">
+              <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                 <SelectValue placeholder="Select Status" />
               </SelectTrigger>
               <SelectContent>
@@ -181,7 +181,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
             onChange={(e) => setComplaint({ ...complaint, address: e.target.value })}
             placeholder="Enter complaint address"
             required
-            className="form_textarea"
+            className="form_textarea border-white"
           />
         </div>
            

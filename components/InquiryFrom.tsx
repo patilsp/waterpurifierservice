@@ -59,7 +59,7 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
      
       <form
         onSubmit={handleFormSubmit}
-        className='glassmorphism mt-4 flex w-full max-w-2xl flex-col gap-4 rounded-lg border border-gray-200 p-4'
+        className='mt-4 flex w-full max-w-2xl flex-col gap-4 rounded-lg border border-gray-200 p-8'
       >
         <div className="grid gap-2">
           <Label htmlFor="type">Service Type</Label>
