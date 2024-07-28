@@ -83,7 +83,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                         runCommand(() => router.push(navItem.href as string))
                       }}
                     >
-                      <div className="results-list">
+                      <div className="flex w-full flex-col">
                         <div className="entry ">
                         <div className="flex size-10 items-center justify-center rounded-lg bg-gray-200 transition-all duration-200 ease-in-out dark:bg-gray-600">
 

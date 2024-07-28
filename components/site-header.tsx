@@ -47,7 +47,7 @@ export function SiteHeader() {
                 Dashboard
              
             </Link> */}
-            <button className="mr-1 justify-center rounded-md  p-1 px-2 text-sm font-medium text-black shadow  transition-colors focus-visible:outline-none focus-visible:ring-1   focus-visible:ring-ring dark:text-white md:flex" type="button" onClick={() => router.push('/dashboard')}>
+            <button className="mr-1 hidden justify-center rounded-md  p-1 px-2 text-sm font-medium text-black shadow  transition-colors focus-visible:outline-none focus-visible:ring-1   focus-visible:ring-ring dark:text-white md:flex" type="button" onClick={() => router.push('/dashboard')}>
               Dashboard
             </button>
 

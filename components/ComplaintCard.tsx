@@ -10,49 +10,38 @@ import { format } from "date-fns";
 import { motion } from "framer-motion";
 
 const ComplaintCard = ({ complaint, handleEdit, handleDelete, handleTagClick }) => {
- 
-  
   const pathName = usePathname();
   const router = useRouter();
 
   const { isLoaded, userId, sessionId, getToken } = useAuth();
   const { isSignedIn, user } = useUser();
 
-  const userName = user?.fullName || "User Name";
-  const userProfileImage = user?.profileImageUrl || "/images/avatar.png";
-  const userMobile = user?.phone || "";
-
-
   const [copied, setCopied] = useState("");
-
- 
 
   const handleCopy = () => {
     setCopied(complaint.name);
     navigator.clipboard.writeText(complaint.name);
-    setTimeout(() => setCopied(false), 3000);
+    setTimeout(() => setCopied(""), 3000);
   };
 
   return (
-    <Card className="mx-auto mb-6 grid w-full cursor-pointer rounded-lg bg-gray-50 p-4 shadow-lg">
-      <CardHeader className="flex w-full justify-between gap-4">
-        <div
-          className="flex cursor-pointer items-center justify-between gap-3"
-         
-        >
-        <p className='text-xl font-bold text-gray-800'>{complaint.name}</p>
-        <div className='relative'>
+    <Card className="glassmorphism p_0 mx-auto mb-6 w-full max-w-md rounded p-0 shadow-md ring-1 ring-gray-900/5 transition-all duration-300 ease-in-out hover:shadow-lg dark:bg-slate-900">
+      <CardHeader className="flex flex-row items-center justify-between gap-2">
+        <div className="flex items-center gap-3">
+          
+          <div>
+            <p className='rounded-lg border bg-slate-200 px-4 py-1 text-sm font-bold text-gray-800 dark:bg-slate-700 dark:text-gray-200'>{complaint.status}</p>
+            <p className='text-sm text-gray-600 dark:text-gray-400'>{complaint.date && format(new Date(complaint.date), "dd MMM yyyy")}</p>
+          </div>
+        </div>
+        <div className='relative mt-2 md:mt-0'>
           <Button
             variant="outline"
             onClick={handleCopy}
             className="p-1 px-2"
           >
             <Image
-              src={
-                copied === complaint.name
-                  ? "/icons/tick.svg"
-                  : "/icons/copy.svg"
-              }
+              src={copied === complaint.name ? "/icons/tick.svg" : "/icons/copy.svg"}
               alt={copied === complaint.name ? "tick_icon" : "copy_icon"}
               width={16}
               height={16}
@@ -64,33 +53,18 @@ const ComplaintCard = ({ complaint, handleEdit, handleDelete, handleTagClick }) 
             </span>
           )}
         </div>
-        </div>
-
       </CardHeader>
       
-      <CardContent className="my-4">
-        
-        <p className='text-sm text-gray-700'>{complaint.address}</p>
-        <p className='text-sm text-gray-700'>{complaint.mobile}</p>
-        <p className='text-sm text-gray-700'>{complaint.model}</p>
+      <CardContent>
+        <div className="mb-2">
+          <h3 className="gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">Details</h3>
+            <p className='text-sm text-gray-700 dark:text-gray-400'>{complaint.name}</p>
+            <p className='text-sm text-gray-700 dark:text-gray-400'>{complaint.mobile}</p>
+            <p className='text-sm text-gray-700 dark:text-gray-400'>{complaint.address}</p>
+        </div>
       </CardContent>
       
-      {userId === complaint.userId && (
-        <CardFooter className='flex gap-4'>
-          <Button
-            variant="success"
-            onClick={handleEdit}
-          >
-            Edit
-          </Button>
-          <Button
-            variant="danger"
-            onClick={handleDelete}
-          >
-            Delete
-          </Button>
-        </CardFooter>
-      )}
+    
     </Card>
   );
 };

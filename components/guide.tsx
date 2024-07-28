@@ -15,17 +15,17 @@ export default function Guide() {
 
        
 
-        <section className="space-y-6 bg-slate-100 py-2 dark:bg-slate-900 dark:text-white md:py-12 lg:py-24">
+        <section className="space-y-6 bg-[#e8efff] py-2 dark:bg-slate-900 dark:text-white md:py-12 lg:py-24">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
             >
-                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center">
                     <h1 className="font-heading text-xl font-semibold leading-[1.1]">
                         - How it works
                     </h1>
-                    <h2 className="font-heading text-3xl font-bold leading-[1.1]">
+                    <h2 className="font-heading text-2xl font-bold leading-[1.1]">
                        <span className="text_primary">A Step-By-Step Guide </span>
                     </h2>
                 </div>
@@ -104,10 +104,11 @@ export default function Guide() {
                         >
                             <div className="flex max-w-xl flex-row gap-10">
                                 <Image
-                                    src="/images/map.png"
-                                    width={800}
-                                    height={800}
+                                    src="/images/7773496.jpg"
+                                    width={900}
+                                    height={900}
                                     alt="map"
+                                    className="sm:p-2"
                                 />
                             </div>
                         </motion.div>

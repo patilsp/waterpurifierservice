@@ -76,8 +76,8 @@ const ComplaintFeed = () => {
   return (
     <section className="w-full px-6 py-4">
       <div className="space-between items-center md:flex ">
-        <div>
-          <h1 className="mb-6"> My Complaints </h1>
+        <div className="text-center">
+          <h1 className="mb-6 text-xl font-semibold"> My Complaints </h1>
         </div>
         <div className="ml-auto">
           <form className="mb-6">

@@ -275,7 +275,9 @@
   }
 }
 
-
+.p_0{
+  padding: 0px !important;
+}
 
 .text-shadow{
   text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
@@ -419,13 +421,6 @@ p.label {
 .results .results-list .entry:hover span {
   color: #7ba0eb;
 }
-
-.results .results-list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 
 .results .entry .desc label {
   display: block;
