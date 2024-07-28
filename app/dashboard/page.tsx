@@ -122,10 +122,10 @@ export default function DashboardPage() {
                   {statusTypes.map((statusType) => (
                     <Card key={statusType.value} className="rounded">
                       <div
-                        className={`cursor-pointer rounded border p-4 flex items-center ${selectedStatus === statusType.value ? 'bg-primary text-white dark:bg-black' : 'bg-white dark:bg-slate-700'}`}
+                        className={`flex cursor-pointer items-center justify-between rounded border p-4 ${selectedStatus === statusType.value ? 'bg-primary text-white dark:bg-black' : 'bg-white dark:bg-slate-700'}`}
                         onClick={() => handleStatusClick(statusType.value)}
                       >    
-                        <CardContent className="flex items-center justify-between gap-3 pt-5">              
+                        <CardContent className="flex w-full items-center justify-between gap-3 pt-5">              
                           <h2 className="text-sm font-bold">{statusType.label}</h2>
                           <p className="text-xl font-bold text-muted-foreground">{statusCounts[statusType.value]}</p>
                         </CardContent>              
