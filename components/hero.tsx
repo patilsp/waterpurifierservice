@@ -17,7 +17,7 @@ export default function Hero() {
         <h1 className="font-fold text-4xl leading-[1.1] md:text-6xl">
           Our Features
         </h1>
-        <p className="max-w-[50%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Discover the powerful features of our water purifier service app, designed to ensure clean and safe water for you and your family.
         </p>
       </div>

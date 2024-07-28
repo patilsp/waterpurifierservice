@@ -77,7 +77,7 @@ export default function Pricing() {
                             </ul>
                         </div>
                         <div className="mt-10 flex flex-col gap-4 text-center">
-                            <Link href="/plans" className="rounded border px-4 py-3 hover:bg-[#4548b9] hover:text-white hover:opacity-80">
+                            <Link href="/plans" className="rounded border px-4 py-3 text-white hover:bg-[#4548b9] hover:text-white hover:opacity-80">
                                 Choose Plan
                             </Link>
                         </div>

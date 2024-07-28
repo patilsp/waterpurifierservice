@@ -77,7 +77,7 @@ export default function Banner() {
               - Your Trusted Water Purification Partner
             </div>
             <h1 className="text-shadow mt-6 bg-gradient-to-b from-black to-[#001E80] bg-clip-text text-5xl font-bold tracking-tighter text-transparent">
-              Clean and Safe <span className="text-primary1">Water</span> <br className="hidden sm:inline" />
+              Clean and  <span className="text-primary1">Safe Water</span> <br className="hidden sm:inline" />
               <span className="text-primary1">Purification</span> Solutions
             </h1>
             <motion.p
@@ -190,11 +190,11 @@ export default function Banner() {
             </div>
             
          
-          <div className="container mt-10">
-            <div className="flex flex-col items-center justify-center rounded-lg p-4 md:flex-row md:p-8">
-              <div className="grid gap-4 md:grid-cols-4">
+          <div className="container-fluid mt-10">
+            <div className="flex flex-col items-center justify-center rounded-lg p-0 md:flex-row md:p-8">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                 <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#4548b9] hover:shadow-lg">
-                  <div className="flex flex-row items-center gap-2 rounded-md  p-4">
+                  <div className="flex flex-row items-center gap-2 rounded-md  p-0 md:p-4">
                     <ShieldCheck className="size-8 text-white"/>
                     <div className="space-y-2">
                       <h1 className="text-sm font-bold text-white">
@@ -205,7 +205,7 @@ export default function Banner() {
                 </div>
 
                 <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#0000ff] hover:shadow-lg">
-                  <div className="flex flex-row items-center gap-2 rounded-md p-4">
+                  <div className="flex flex-row items-center gap-2 rounded-md p-0 md:p-4">
                     <Settings className="size-8 text-white"/>
                     <div className="space-y-2">
                       <h1 className="text-sm font-bold text-white">
@@ -216,7 +216,7 @@ export default function Banner() {
                 </div>
                 
                 <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#0000ff] hover:shadow-lg">
-                  <div className="flex flex-row items-center gap-2 rounded-md p-4">
+                  <div className="flex flex-row items-center gap-2 rounded-md p-0 md:p-4">
                     <ThumbsUp className="size-8 text-white"/>
                     <div className="space-y-2">
                       <h1 className="text-sm font-bold text-white">
@@ -226,7 +226,7 @@ export default function Banner() {
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg border-white bg-[#4548b9] p-2 hover:border-[#0000ff] hover:shadow-lg">
-                  <div className="flex flex-row items-center gap-2 rounded-md p-4">
+                  <div className="flex flex-row items-center gap-2 rounded-md p-0 md:p-4">
                     <Users className="size-8 text-white"/>
                     <div className="space-y-2">
                       <h1 className="text-sm font-bold text-white">
