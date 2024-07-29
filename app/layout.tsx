@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   description: 'Clean, Clear, Confident: Transforming Lives One Drop at a Time',
 
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
   },
 }
 

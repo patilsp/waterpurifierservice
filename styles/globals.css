@@ -73,9 +73,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background  text-sm;
   }
 }
+
 /* 
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
@@ -102,13 +103,13 @@
 
 .main:after {
   content: "";
-  background-image: url("/assets/images/grid.svg");
+  background-image: url("/images/grid.svg");
   z-index: 1;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
-  opacity: 0.4;
+  opacity: 0.1;
   filter: invert(1);
 }
 
@@ -324,9 +325,9 @@
 }
 
 .glassmorphism{
-    background-color: transparent;
+    /* background-color: transparent; */
     border: 2px solid white !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
 }
 
 

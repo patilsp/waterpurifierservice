@@ -18,7 +18,7 @@ import {
 } from "@/registry/new-york/ui/tabs"
 import { CalendarDateRangePicker } from "@/app/dashboard/components/date-range-picker"
 import { Overview } from "@/app/dashboard/components/overview"
-import { RecentSales } from "@/app/dashboard/components/recent-sales"
+import { ComplaintsCompleted } from "@/app/dashboard/components/complaints-completed"
 import { Search } from "@/app/dashboard/components/search"
 import TeamSwitcher from "@/app/dashboard/components/team-switcher"
 import { useAuth, useUser } from "@clerk/nextjs"; 
@@ -157,7 +157,7 @@ export default function DashboardPage() {
 
               <TabsContent value="analytics" className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-                  <Card className="col-span-4">
+                  <Card className="col-span-3 md:col-span-4">
                     <CardHeader>
                       <CardTitle>Overview</CardTitle>
                     </CardHeader>
@@ -171,7 +171,7 @@ export default function DashboardPage() {
                       <CardDescription>You made 265 sales this month.</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <RecentSales />
+                      <ComplaintsCompleted />
                     </CardContent>
                   </Card>
                 </div>

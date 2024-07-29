@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import ComplaintForm from "@/components/ComplaintForm";
 import { useAuth, useUser } from "@clerk/nextjs";
-import { revalidatePath } from 'next/cache'
 
 
 const CreateComplaint = () => {
@@ -29,7 +28,7 @@ const CreateComplaint = () => {
     visitDate: "",
     status: "",
     name: "",
-    assignUser:"",
+    assignUser:"Admin",
   });
 
   const createComplaint = async (e) => {
@@ -47,8 +46,7 @@ const CreateComplaint = () => {
 
       if (response.ok) {
         toast.success("Complaint has been created! 🔥");
-        // router.push("/dashboard");
-        revalidatePath('/dashboard')
+        router.push("/dashboard");
       } else {
         throw new Error("Failed to create complaint");
       }

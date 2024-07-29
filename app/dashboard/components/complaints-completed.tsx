@@ -4,7 +4,7 @@ import {
   AvatarImage,
 } from "@/registry/new-york/ui/avatar"
 
-export function RecentSales() {
+export function ComplaintsCompleted() {
   return (
     <div className="space-y-8">
       <div className="flex items-center">

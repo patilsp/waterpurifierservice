@@ -81,7 +81,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
       
       {/* Form Section */}
       <div className="glassmorphism w-full rounded-lg border bg-white shadow-lg dark:bg-slate-900 dark:text-white lg:w-1/2">
-        <div className="p-1">
+        <div className="py-1">
           <h1 className='head_text text-center'>
             <span className='green_gradient text-2xl font-bold'>{type} Complaint</span>
           </h1>
@@ -91,7 +91,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
         </div>
         <motion.form
           onSubmit={handleSubmit}
-          className='mt-2 flex w-full flex-col gap-4 p-4'
+          className='mt-2 flex w-full flex-col gap-5 p-4'
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -184,7 +184,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
             className="form_textarea border-white"
           />
         </div>
-        <input type="hidden" name="hiddenAssignUser" value="admin" />
+        <input type="hidden" name="hiddenAssignUser" value="Admin" />
 
           <div className='mt-6 flex justify-center gap-4'>
             <Link href='/complains' className='flex items-center rounded bg-red-400 p-1 px-4 text-sm text-primary-foreground shadow hover:bg-red-600'>
