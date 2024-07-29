@@ -45,21 +45,21 @@ const UpdateComplaint = () => {
 
   
   useEffect(() => {
-    const getCustomerDetails = async () => {
+    const getComplaintDetails = async () => {
       try {
-        const response = await fetch(`/api/customer`); 
+        const response = await fetch(`/api/complaint`); 
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
         setPosts(data);
       } catch (error) {
-        console.error("Failed to fetch customers:", error);
+        console.error("Failed to fetch complaints:", error);
       }
     };
 
-    if (customerId) getCustomerDetails();
-  }, [customerId]);
+    if (complaintId) getComplaintDetails();
+  }, [complaintId]);
 
 
   

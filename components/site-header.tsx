@@ -47,12 +47,12 @@ export function SiteHeader() {
                 Dashboard
              
             </Link> */}
-            <button className="mr-1 hidden justify-center rounded-md  p-1 px-2 text-sm font-medium text-black shadow  transition-colors focus-visible:outline-none focus-visible:ring-1   focus-visible:ring-ring dark:text-white md:flex" type="button" onClick={() => router.push('/dashboard')}>
+            <button className="mr-1 hidden justify-center rounded  p-1 px-2 text-sm font-medium text-black shadow  transition-colors focus-visible:outline-none focus-visible:ring-1   focus-visible:ring-ring dark:text-white md:flex" type="button" onClick={() => router.push('/dashboard')}>
               Dashboard
             </button>
 
           {userId == null ? (
-            <Link href="/sign-in" className="mr-1 flex w-20 justify-center rounded-md p-1 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+            <Link href="/sign-in" className="mr-1 flex w-20 justify-center rounded p-0 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
                 Sign In
              
             </Link>

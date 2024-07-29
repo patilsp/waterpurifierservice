@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import ComplaintForm from "@/components/ComplaintForm";
 import { useAuth, useUser } from "@clerk/nextjs";
+import { revalidatePath } from 'next/cache'
+
 
 const CreateComplaint = () => {
   const router = useRouter();
@@ -20,14 +22,14 @@ const CreateComplaint = () => {
   const [submitting, setIsSubmitting] = useState(false);
   const [complaint, setComplaint] = useState({
     userId: "",
-    productType: "product-1",
-    complaintType: "Installation",
+    productType: "",
+    complaintType: "",
     mobile: "",
     address: "",
     visitDate: "",
-    status: "Active",
+    status: "",
     name: "",
-    assignUser:"Admin",
+    assignUser:"",
   });
 
   const createComplaint = async (e) => {
@@ -45,7 +47,8 @@ const CreateComplaint = () => {
 
       if (response.ok) {
         toast.success("Complaint has been created! 🔥");
-        router.push("/dashboard");
+        // router.push("/dashboard");
+        revalidatePath('/dashboard')
       } else {
         throw new Error("Failed to create complaint");
       }

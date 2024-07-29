@@ -81,7 +81,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
       
       {/* Form Section */}
       <div className="glassmorphism w-full rounded-lg border bg-white shadow-lg dark:bg-slate-900 dark:text-white lg:w-1/2">
-        <div className="p-5">
+        <div className="p-1">
           <h1 className='head_text text-center'>
             <span className='green_gradient text-2xl font-bold'>{type} Complaint</span>
           </h1>
@@ -112,7 +112,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
 
         <div className="grid gap-2">
             <Label htmlFor="product">Choose Product</Label>
-            <Select value={complaint.productType} defaultValue={complaint.productType || "product-1"} onValueChange={handleProductTypeChange}>
+            <Select value={complaint.productType} defaultValue={complaint.productType || ""} onValueChange={handleProductTypeChange}>
               <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                 <SelectValue placeholder="Select Product" />
               </SelectTrigger>
@@ -127,7 +127,7 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
 
           <div className="grid w-full gap-2">
             <Label htmlFor="type">Call Service Type</Label>
-            <Select value={complaint.complaintType} defaultValue={complaint.complaintType || "Installation"} onValueChange={handleServiceTypeChange}>
+            <Select value={complaint.complaintType} defaultValue={complaint.complaintType || ""} onValueChange={handleServiceTypeChange}>
               <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                 <SelectValue placeholder="Select Service Type" />
               </SelectTrigger>
@@ -159,13 +159,13 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
               <DatePickerDemo className="border border-white" date={date} setDate={setDate} />
             </div>
             <div className="grid w-full gap-2">
-            <Label htmlFor="status">Status</Label>
-            <Select  value={complaint.status} defaultValue={complaint.status || "Active"} onValueChange={handleStatusChange}>
+            <Label htmlFor="status">Product Status</Label>
+            <Select  value={complaint.status} defaultValue={complaint.status || ""} onValueChange={handleStatusChange}>
               <SelectTrigger className="line-clamp-1 w-full truncate border-white">
                 <SelectValue placeholder="Select Status" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Active">Active</SelectItem>
+                {/* <SelectItem value="Active">Active</SelectItem> */}
                 <SelectItem value="Warranty">Warranty</SelectItem>
                 <SelectItem value="Out Of Warranty">Out Of Warranty</SelectItem>
               </SelectContent>
@@ -184,9 +184,10 @@ const ComplaintForm = ({ type, complaint, setComplaint, submitting, handleSubmit
             className="form_textarea border-white"
           />
         </div>
-           
+        <input type="hidden" name="hiddenAssignUser" value="admin" />
+
           <div className='mt-6 flex justify-center gap-4'>
-            <Link href='/complaints' className='flex items-center rounded bg-red-400 p-1 px-4 text-sm text-primary-foreground shadow hover:bg-red-600'>
+            <Link href='/complains' className='flex items-center rounded bg-red-400 p-1 px-4 text-sm text-primary-foreground shadow hover:bg-red-600'>
               Cancel
             </Link>
 

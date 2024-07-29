@@ -55,11 +55,11 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
   };
 
   return (
-    <section className='mb-5 flex w-full max-w-full flex-col items-center justify-center px-4'>
+    <section className='flex w-full max-w-full flex-col items-center justify-center px-4'>
      
       <form
         onSubmit={handleFormSubmit}
-        className='mt-4 flex w-full max-w-2xl flex-col gap-4 rounded-lg border border-gray-200 p-8'
+        className='flex w-full max-w-2xl flex-col gap-2 rounded-lg border border-gray-200 p-8'
       >
         <div className="grid gap-2">
           <Label htmlFor="type">Service Type</Label>

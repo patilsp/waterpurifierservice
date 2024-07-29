@@ -47,44 +47,18 @@ export const statuses = [
   },
 
   {
-    value: "canceled",
+    value: "Canceled",
     label: "Canceled",
     icon: CrossCircledIcon,
   },
-]
-
-export const emails = [
   {
-    label: "Low",
-    value: "low",
-    icon: ArrowDownIcon,
+    value: "Completed",
+    label: "Completed",
+    icon: CheckCircledIcon,
   },
   {
-    label: "Medium",
-    value: "medium",
-    icon: ArrowRightIcon,
-  },
-  {
-    label: "High",
-    value: "high",
-    icon: ArrowUpIcon,
-  },
-]
-
-export const phones = [
-  {
-    label: "Low",
-    value: "low",
-    icon: ArrowDownIcon,
-  },
-  {
-    label: "Medium",
-    value: "medium",
-    icon: ArrowRightIcon,
-  },
-  {
-    label: "High",
-    value: "high",
-    icon: ArrowUpIcon,
+    value: "Other",
+    label: "Other",
+    icon: CheckCircledIcon,
   },
 ]

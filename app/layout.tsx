@@ -14,15 +14,15 @@ import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: 'Excellent Service',
     template: `%s - ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: 'Clean, Clear, Confident: Transforming Lives One Drop at a Time',
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 }
 
@@ -35,9 +35,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
     <ClerkProvider>
       <html lang="en">
-
-        
-        
       <body
           className={cn(
             "min-h-screen  font-sans antialiased",

@@ -2,6 +2,8 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import { redirect } from 'next/navigation'
+
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { Row } from "@tanstack/react-table";
 import { Button } from "@/registry/new-york/ui/button";
@@ -129,6 +131,12 @@ export function DataTableRowActions({
 
             toast.success(`Complaint assigned to ${assignUser} with status ${status}`);
             router.refresh();
+            if (onRefresh) {
+              onRefresh();
+            } else {
+              router.refresh();
+            }
+            window.location.reload();
             setShowAssignDialog(false);
         } catch (error) {
             toast.error(`Error assigning complaint: ${error.message}`);
