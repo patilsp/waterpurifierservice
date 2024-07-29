@@ -45,8 +45,7 @@ export default function CustomerPage() {
 
       setAllComplaints(transformedComplaints);
       setFilteredComplaints(transformedComplaints);
-
-      // Calculate counts
+      
       const counts = {
         all: transformedComplaints.length,
         Warranty: transformedComplaints.filter(c => c.status === 'Warranty').length,
