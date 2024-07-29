@@ -46,7 +46,7 @@ const CreateComplaint = () => {
 
       if (response.ok) {
         toast.success("Complaint has been created! 🔥");
-        router.push("/dashboard");
+        router.push("/complains");
       } else {
         throw new Error("Failed to create complaint");
       }

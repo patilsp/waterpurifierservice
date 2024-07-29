@@ -30,7 +30,7 @@ const ComplaintCard = ({ complaint, handleEdit, handleDelete, handleTagClick }) 
         <div className="flex items-center gap-3">
           
           <div>
-            <p className='rounded-lg border bg-slate-200 px-4 py-1 text-sm font-bold text-gray-800 dark:bg-slate-700 dark:text-gray-200'>{complaint.status}</p>
+            <p className='rounded border bg-gray-100 px-4 py-1 text-sm font-semibold text-orange-500 dark:bg-slate-700 dark:text-gray-200'>{complaint.status}</p>
             <p className='text-sm text-gray-600 dark:text-gray-400'>{complaint.date && format(new Date(complaint.date), "dd MMM yyyy")}</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ const ComplaintCard = ({ complaint, handleEdit, handleDelete, handleTagClick }) 
       
       <CardContent>
         <div className="mb-2">
-          <h3 className="gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">Details</h3>
+          <h3 className="flex justify-between gap-4 text-lg font-semibold text-gray-800 dark:text-gray-200">Details</h3>
             <p className='text-sm text-gray-700 dark:text-gray-400'>{complaint.name}</p>
             <p className='text-sm text-gray-700 dark:text-gray-400'>{complaint.mobile}</p>
             <p className='text-sm text-gray-700 dark:text-gray-400'>{complaint.address}</p>

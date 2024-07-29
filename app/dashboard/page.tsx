@@ -105,15 +105,15 @@ export default function DashboardPage() {
             </div>
           </div>
             <div className="flex items-center justify-between space-y-2 md:flex-row md:space-y-0">
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Dashboard</h2>
+              <h2 className="hidden text-2xl font-bold tracking-tight md:block md:text-3xl">Dashboard</h2>
               <div className="hidden items-center space-x-2 md:flex">
                 <CalendarDateRangePicker />
                 <Button>Download</Button>
               </div>
             </div>
-            <Tabs defaultValue="overview" className="space-y-4">
-              <TabsList className="flex flex-wrap justify-start">
-                <TabsTrigger value="overview">Overview</TabsTrigger>
+            <Tabs defaultValue="overview" className="space-y-6">
+              <TabsList className="flex flex-wrap justify-center bg-transparent p-2">
+                <TabsTrigger value="overview">Dashboard</TabsTrigger>
                 <TabsTrigger value="analytics">Analytics</TabsTrigger>
                 <TabsTrigger value="reports">Reports</TabsTrigger>
               </TabsList>

@@ -52,7 +52,7 @@ export function SiteHeader() {
             </button>
 
           {userId == null ? (
-            <Link href="/sign-in" className="mr-1 flex w-20 justify-center rounded p-0 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+            <Link href="/sign-in" className="mr-1 flex w-20 justify-center rounded p-1 font-medium text-black shadow   transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
                 Sign In
              
             </Link>
