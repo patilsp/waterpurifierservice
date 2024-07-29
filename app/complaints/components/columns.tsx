@@ -73,7 +73,7 @@ export const columns: ColumnDef<Complaint>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
     ),
-    cell: ({ row }) => <div className="w-[125px] bg-slate-300 text-center rounded p-1">{row.getValue("status")}</div>,
+    cell: ({ row }) => <div className="w-[125px] rounded bg-slate-300 p-1 text-center">{row.getValue("status")}</div>,
     enableSorting: true,
     enableHiding: true,
   },

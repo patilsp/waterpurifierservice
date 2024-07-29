@@ -8,22 +8,22 @@ function Service() {
   return (
     <div>
       <section className="relative bg-gray-200 py-8 pb-20">
-        <div className="justify-center text-center flex flex-wrap py-8">
-          <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="font-semibold text-4xl">Why Choose Excellent Service?</h2>
-            <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-600">
+        <div className="flex flex-wrap justify-center py-8 text-center">
+          <div className="w-full px-12 md:w-6/12 md:px-4">
+            <h2 className="text-4xl font-semibold">Why Choose Excellent Service?</h2>
+            <p className="my-4 text-lg leading-relaxed text-gray-600">
               Discover the top reasons why our water purifier services stand out from the rest.
             </p>
           </div>
         </div>
 
         <div className="container mx-auto px-4 py-8">
-          <div className="items-center flex flex-col md:flex-row">
+          <div className="flex flex-col items-center md:flex-row">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="w-full md:w-4/12 mr-auto px-4 md:pt-0 my-0"
+              className="my-0 mr-auto w-full px-4 md:w-4/12 md:pt-0"
             >
               <Image
                 src="/images/image-1.png"
@@ -34,9 +34,9 @@ function Service() {
                 className=""
               />
             </motion.div>
-            <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+            <div className="mx-auto w-full px-4 md:w-5/12">
               <div className="md:pr-4">
-                <div className="text-blue-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                <div className="mb-6 inline-flex size-16 items-center justify-center rounded-full bg-white p-3 text-center text-blue-600 shadow-lg">
                   <i className="fas fa-check-circle text-xl"></i>
                 </div>
                 <h3 className="text-3xl font-semibold">Reliable Service</h3>
@@ -80,12 +80,12 @@ function Service() {
         </div>
 
         <div className="container mx-auto px-4 py-8">
-          <div className="items-center flex flex-col md:flex-row">
+          <div className="flex flex-col items-center md:flex-row">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="w-full md:w-4/12 mr-auto px-4 md:pt-0 my-0"
+              className="my-0 mr-auto w-full px-4 md:w-4/12 md:pt-0"
             >
               <Image
                 src="/images/image-1.png"

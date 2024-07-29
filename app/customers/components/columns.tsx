@@ -104,7 +104,7 @@ export const columns: ColumnDef<Customer>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
     ),
-    cell: ({ row }) => <div className="bg-slate-300 rounded p-1">{row.getValue("status")}</div>,
+    cell: ({ row }) => <div className="rounded bg-slate-300 p-1">{row.getValue("status")}</div>,
     enableSorting: true,
     enableHiding: true,
   },

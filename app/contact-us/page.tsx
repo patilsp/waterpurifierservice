@@ -40,7 +40,7 @@ const ContactUs = () => {
     >
       {/* Banner Section */}
       <div className="relative h-96 w-full bg-cover bg-center p-2" style={{ backgroundImage: "url('/images/banner-bg.jpg')" }}>
-        <div className="absolute p-2 inset-0 flex flex-col items-center justify-center bg-slate-700 bg-opacity-50">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-700 p-2">
           <motion.h1
             className="mb-2 text-center text-4xl font-bold text-white"
             initial={{ y: -50 }}
