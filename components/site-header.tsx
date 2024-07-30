@@ -29,9 +29,9 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center">
           <Image
             src="/images/water.svg"
-            className="mt-8 object-contain"
+            className="mt-6 object-contain"
             width={60}
-            height={60}
+            height={60} 
             alt="Logo image"
           />
         </Link>
@@ -47,7 +47,7 @@ export function SiteHeader() {
                 Dashboard
              
             </Link> */}
-            <Button className="mr-1 hidden md:flex" type="button" onClick={() => router.push('/dashboard')}>
+            <Button className="font-sm mr-1 hidden h-8 py-1 md:flex" type="button" onClick={() => router.push('/dashboard')}>
               Dashboard
             </Button>
 
