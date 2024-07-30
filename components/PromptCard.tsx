@@ -6,6 +6,9 @@ import { useSession } from "@clerk/nextjs";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
+import { Button } from "@/registry/new-york/ui/button";
+
+
 const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   const { data: session } = useSession();
   const pathName = usePathname();
@@ -14,7 +17,6 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   const [copied, setCopied] = useState("");
 
   const handleProfileClick = () => {
-    console.log(post);
 
     if (post.creator?._id === session?.user.id) return router.push("/userprofile");
 
@@ -31,34 +33,34 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     
       <div className='prompt_card'>
         <div className='flex items-start justify-between gap-5'>
-          <div
-            className='flex flex-1 cursor-pointer items-center justify-start gap-3'
-            onClick={handleProfileClick}
-          >
-            <Image
-              src={post.creator?.image}
-              alt='user_image'
-              width={40}
-              height={40}
-              className='rounded-full object-contain'
-            />
+            {/* <div
+              className='flex flex-1 cursor-pointer items-center justify-start gap-3'
+              onClick={handleProfileClick}
+            >
+              <Image
+                src={post.creator?.image}
+                alt='user_image'
+                width={40}
+                height={40}
+                className='rounded-full object-contain'
+              />
 
-            <div className='flex flex-col'>
-              <h3 className=' font-semibold text-gray-900'>
-                {post.creator?.username}
-              </h3>
-              <p className='font-inter text-sm text-gray-500'>
-                {post.creator?.email}
-              </p>
-            </div>
-          </div>
+              <div className='flex flex-col'>
+                <h3 className=' font-semibold text-gray-900'>
+                  {post.creator?.username}
+                </h3>
+                <p className='font-inter text-sm text-gray-500'>
+                  {post.creator?.email}
+                </p>
+              </div>
+            </div> */}
 
           <div className='copy_btn' onClick={handleCopy}>
             <Image
               src={
                 copied === post.prompt
-                  ? "/assets/icons/tick.svg"
-                  : "/assets/icons/copy.svg"
+                  ? "/icons/tick.svg"
+                  : "/icons/copy.svg"
               }
               alt={copied === post.prompt ? "tick_icon" : "copy_icon"}
               width={12}

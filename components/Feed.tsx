@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-import PromptCard from "./PromptCard";
+import { Input } from "@/registry/new-york/ui/input";
+import PromptCard from "@/components/PromptCard";
 import { motion } from "framer-motion"
 
 const PromptCardList = ({ data, handleTagClick }) => {
@@ -72,7 +72,7 @@ const Feed = () => {
     
       <section className='feed'>
         <form className='flex-center relative w-full'>
-          <input
+          <Input
             type='text'
             placeholder='Search for a tag or a username'
             value={searchText}

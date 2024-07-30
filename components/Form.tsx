@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { Button } from "@/registry/new-york/ui/button";
+import { Input } from "@/registry/new-york/ui/input";
+import { Label } from "@/registry/new-york/ui/label";
+import { Textarea } from "@/registry/new-york/ui/textarea";
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
@@ -15,46 +19,45 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         onSubmit={handleSubmit}
         className='glassmorphism mt-10 flex w-full max-w-2xl flex-col gap-7 dark:bg-slate-900 dark:text-white'
       >
-        <label>
+        <Label>
           <span className='font-satoshi text-base font-semibold text-gray-700'>
-            Your AI Prompt
+            Description
           </span>
 
-          <textarea
+          <Textarea
             value={post.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
             placeholder='Write your post here'
             required
             className='form_textarea '
           />
-        </label>
+        </Label>
 
-        <label>
+        <Label>
           <span className='font-satoshi text-base font-semibold text-gray-700'>
-            Field of Prompt{" "}
+            Product Tag{" "}
             <span className='font-normal'>
-              (#product, #webdevelopment, #idea, etc.)
+              (#product, #idea, etc.)
             </span>
           </span>
-          <input
+          <Input
             value={post.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}
             type='text'
             placeholder='#Tag'
-            required
-            className='form_input'
+            className='p-1'
           />
-        </label>
+        </Label>
 
-        <div className='flex-end mx-3 mb-5 gap-4'>
-          <Link href='/' className='text-sm text-gray-500'>
+        <div className='mx-3 mb-5 flex items-center justify-center gap-4'>
+          <Link href='/' className='flex items-center rounded bg-red-400 px-4 py-2 text-sm text-primary-foreground shadow hover:bg-red-600'>
             Cancel
           </Link>
 
           <button
             type='submit'
             disabled={submitting}
-            className='rounded-full bg-primary px-5 py-1.5 text-sm text-white'
+            className='rounded bg-primary px-5 py-2 text-sm text-white dark:text-black'
           >
             {submitting ? `${type}ing...` : type}
           </button>

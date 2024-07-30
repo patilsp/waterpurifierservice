@@ -31,8 +31,8 @@ const CreatePrompt = () => {
       });
 
       if (response.ok) {
-        toast.success("Prompt has been created! 🔥");
-        router.push("/");
+        toast.success("Post has been created! 🔥");
+        router.push("/posts");
       }
     } catch (error) {
       // console.log(error);
