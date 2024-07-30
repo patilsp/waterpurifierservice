@@ -1,5 +1,6 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { Checkbox } from "@/registry/new-york/ui/checkbox";
+import { Badge } from "@/registry/new-york/ui/badge";
 import { Complaint } from "../data/schema";
 import { DataTableColumnHeader } from "./data-table-column-header";
 import { DataTableRowActions } from "./data-table-row-actions";
@@ -57,8 +58,6 @@ export const columns: ColumnDef<Complaint>[] = [
     enableSorting: true,
     enableHiding: false,
   },
- 
- 
   {
     accessorKey: "complaintType",
     header: ({ column }) => (
@@ -73,7 +72,33 @@ export const columns: ColumnDef<Complaint>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
     ),
-    cell: ({ row }) => <div className="w-[125px] rounded bg-slate-300 p-1 text-center">{row.getValue("status")}</div>,
+    cell: ({ row }) => {
+      const status = row.getValue("status");
+      let badgeColor = "bg-gray-200";
+
+      switch (status) {
+        case "Warranty":
+          badgeColor = "bg-blue-500";
+          break;
+        case "Completed":
+          badgeColor = "bg-green-500";
+          break;
+        case "Cancelled":
+          badgeColor = "bg-red-500";
+          break;
+        case "Out Of Warranty":
+          badgeColor = "bg-yellow-500";
+          break;
+        default:
+          badgeColor = "bg-gray-200";
+      }
+
+      return (
+        <Badge className={`flex w-32 justify-center rounded py-2 text-center text-white ${badgeColor}`}>
+          {status}
+        </Badge>
+      );
+    },
     enableSorting: true,
     enableHiding: true,
   },

@@ -50,7 +50,6 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
       }
     } catch (error) {
       console.error("An error occurred while submitting Inquiry:", error);
-    //   toast.error("An error occurred while submitting the Inquiry.");
     }
   };
 
@@ -59,7 +58,7 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
      
       <form
         onSubmit={handleFormSubmit}
-        className='flex w-full max-w-2xl flex-col gap-2 rounded-lg border border-gray-200 p-8'
+        className='flex w-full max-w-2xl flex-col gap-3 rounded-lg border border-gray-200 p-8'
       >
         <div className="grid gap-2">
           <Label htmlFor="type">Service Type</Label>
@@ -126,7 +125,7 @@ const InquiryForm = ({ type, inquiry, setInquiry, submitting, handleSubmit }) =>
           />
         </div>
 
-        <div className='mx-3 flex justify-center gap-4 py-1'>
+        <div className='mx-3 flex justify-center gap-4 pt-2'>
           <Button
             type='submit'
             disabled={submitting}

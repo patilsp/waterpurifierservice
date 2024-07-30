@@ -36,47 +36,47 @@ export function Footer() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div>
-              <p className="font-medium">
+              <p className="font-bold">
                 Company
               </p>
               <nav className="mt-4 flex flex-col space-y-2 text-base text-gray-500">
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> About </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Meet the Team </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> History </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Careers </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> About </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Meet the Team </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> History </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Careers </a>
               </nav>
             </div>
             <div>
-              <p className="font-medium">
+              <p className="font-bold">
                 Services
               </p>
               <nav className="mt-4 flex flex-col space-y-2 text-base text-gray-500">
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Company Review </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Accounts Review </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> HR Consulting </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> SEO Optimization </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Company Review </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Accounts Review </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> HR Consulting </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> SEO Optimization </a>
               </nav>
             </div>
             <div>
-              <p className="font-medium">
+              <p className="font-bold">
                 Helpful Links
               </p>
               <nav className="mt-4 flex flex-col space-y-2 text-base text-gray-500">
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Contact </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> FAQs </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Live Chat </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Help</a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="/contact-us"> Contact </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="/about-us"> About Us </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> FAQs </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Help</a>
               </nav>
             </div>
             <div>
-              <p className="font-medium">
+              <p className="font-bold">
                 Legal
               </p>
               <nav className="mt-4 flex flex-col space-y-2 text-base text-gray-500">
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Privacy Policy </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Terms &amp; Conditions </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Notice </a>
-                <a className="hover:text-bold hover:text-blue-700 hover:opacity-75" href="#"> Disclaimers </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Privacy Policy </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Terms &amp; Conditions </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Notice </a>
+                <a className="hover:text-bold font-semibold hover:text-blue-700 hover:opacity-75" href="#"> Disclaimers </a>
               </nav>
             </div>
           </div>

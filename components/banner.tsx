@@ -17,7 +17,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/registry/new-york/ui/dialog";
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "@/components/ui/animated-modal";
 
 import bannerImage from '../public/images/banner.webp';
 import zerobImage from '../public/icons/zerob.webp';
@@ -90,16 +89,14 @@ export default function Banner() {
             <div className="mt-7 flex gap-2 md:flex-row">
             
               <div className="flex items-center justify-center py-2">
-                  <Modal className="w-full">
-                    <ModalTrigger className="group/modal-btn relative flex justify-center bg-black text-white dark:bg-white dark:text-black">
-                      <span className="text-center transition duration-500 group-hover:translate-x-40">
-                        Book Now
-                      </span>
-                     
-                    </ModalTrigger>
-                    <ModalBody>
-                      <ModalContent className="max-w-5xl">
-                        <h4 className="mb-8 text-left text-lg font-bold text-neutral-600 dark:text-neutral-100 md:text-2xl">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button>Inquiry Now</Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-5xl">
+                  
+                  
+                  <h4 className="mb-8 text-left text-lg font-bold text-neutral-600 dark:text-neutral-100 md:text-2xl">
                         <span className="text-center transition duration-500 group-hover:translate-x-40">
                         Get the list of best 
                         </span><span className="text-indigo-500"> Water Purifier Repair & Services </span>
@@ -129,11 +126,9 @@ export default function Banner() {
                                 </div>
                         
                         </div>
-                      
-                      </ModalContent>
-                      
-                    </ModalBody>
-                  </Modal>
+
+                </DialogContent>
+              </Dialog>
                 </div>
 
               <Button className="btn btn-text mt-2 flex items-center gap-1 bg-transparent text-black hover:text-white">
