@@ -42,8 +42,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <div className='main'>
-          <div className='gradient' />
-        </div>
+              <div className='gradient' />
+            </div>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />

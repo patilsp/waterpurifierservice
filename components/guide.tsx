@@ -15,13 +15,15 @@ export default function Guide() {
 
        
 
-        <section className="space-y-6 bg-[#e8efff] py-2 dark:bg-slate-900 dark:text-white md:py-12 lg:py-24">
+        <section className="space-y-6 bg-[#e8efff] dark:bg-slate-900 dark:text-white">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
             >
-                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center">
+
+                    
+                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-2 pt-4 text-center">
                     <h1 className="font-heading text-xl font-semibold leading-[1.1]">
                         - How it works
                     </h1>

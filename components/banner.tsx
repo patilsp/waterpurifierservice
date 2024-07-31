@@ -147,12 +147,12 @@ export default function Banner() {
               >
                 <div className="relative sm:mt-0 md:mt-7 md:h-[548px] md:flex-1">
                   <Image
-                    src="/images/image-1.png"
+                    src="/images/image-7.png"
                     alt="banner"
-                    height={260}
-                    width={260}
+                    height={300}
+                    width={300}
                     objectFit="contain"
-                    className="h-full w-auto max-w-none md:absolute md:left-10"
+                    className="h-full w-auto max-w-none md:absolute md:p-20"
                   />
                 </div>
               </motion.div>

@@ -104,18 +104,7 @@ export function ProfileForm() {
 
   return (
     <div className="flex gap-8">
-      <div className="w-1/4">
-        <Image
-          src={user?.profileImageUrl || "/images/avatar.png"}
-          alt="Profile Picture"
-          height={120}
-          width={120}
-          className="size-20 rounded-full"
-        />
-        <h2 className="mt-4 text-xl font-bold">{user?.fullName || "User Name"}</h2>
-        <p className="text-sm text-gray-600">{user?.phone || ""}</p>
-      </div>
-      <div className="w-3/4">
+      <div className="w-full">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField

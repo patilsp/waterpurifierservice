@@ -32,7 +32,11 @@ export default function CustomerPage() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-10 md:px-8">
+
+    <div className="p-4 dark:bg-slate-900 dark:text-white">
+    <div className="flex flex-col md:flex-row">
+      
+      <div className="flex-1 space-y-4 p-1 pt-6 md:p-8">
       <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between">
         <div>
           <h2 className="text-xl font-bold md:text-2xl">Welcome back, {userName}!</h2>
@@ -50,9 +54,11 @@ export default function CustomerPage() {
       </div>
 
       <div className="mt-6 overflow-x-auto">
-        <div className="min-w-full">
+        <div className="w-full">
           <DataTable data={allCustomers} columns={columns} />
         </div>
+      </div>
+    </div>
       </div>
     </div>
   );

@@ -90,14 +90,14 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
         <div className="mt-10 p-4">
           <motion.form
             onSubmit={handleSubmit}
-            className='glassmorphism mt-2 flex w-full flex-col gap-4 rounded-lg border bg-transparent p-4 text-slate-800 shadow dark:bg-slate-900 dark:text-white'
+            className='glassmorphism mt-2 flex w-full flex-col gap-6 rounded-lg border bg-transparent p-8 text-slate-800 shadow dark:bg-slate-900 dark:text-white'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className='head_text my-2 text-center text-sm font-bold'>
+            <h1 className='my-2 text-center text-2xl font-bold'>
               Complete User Registration
-            </h2>
+            </h1>
 
             <div className="grid gap-2">
               <Label htmlFor="username">User Full Name</Label>
@@ -162,7 +162,7 @@ const UserForm = ({ type, post, setPost, submitting, handleSubmit }) => {
               <Button
                 type='submit'
                 disabled={submitting}
-                className='w-full rounded bg-indigo-600 px-5 py-1.5 text-sm text-white'
+                className='w-full max-w-60 rounded px-5 py-1.5 text-sm text-white'
               >
                 <Users className="mr-2 size-4" /> {submitting ? `${type}ing...` : type}
               </Button>

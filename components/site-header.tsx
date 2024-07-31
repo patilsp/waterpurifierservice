@@ -25,7 +25,7 @@ export function SiteHeader() {
 
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-50 w-full shadow backdrop-blur dark:bg-slate-900 dark:text-white">
-      <div className="flex h-14 items-center pl-2">
+      <div className="flex h-14  items-center pl-2">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/water.svg"
