@@ -1,6 +1,7 @@
 # Water Purifier Service App
 
-![Template Screenshot](https://github.com/patilsp/excellent-service-application/assets/35653819/ebfd0cff-7384-4f5b-a9e2-43a4c2e9d943)
+![image](https://github.com/user-attachments/assets/10d4cb05-5fb3-40a8-b132-2cf609798b9c)
+
 
 This is a Next.js 13 template designed for building modern web applications with Radix UI and Tailwind CSS. It includes a set of features and best practices to get your project up and running quickly.
 
