@@ -1,4 +1,4 @@
-# Next.js 13 Template with Radix UI and Tailwind CSS
+# Water Purifier Service App
 
 ![Template Screenshot](https://github.com/patilsp/excellent-service-application/assets/35653819/ebfd0cff-7384-4f5b-a9e2-43a4c2e9d943)
 
