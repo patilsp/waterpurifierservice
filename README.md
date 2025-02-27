@@ -1,4 +1,4 @@
-# Water Purifier Service App
+# Water Purifier Service Web App
 
 ![image](https://github.com/user-attachments/assets/10d4cb05-5fb3-40a8-b132-2cf609798b9c)
 
